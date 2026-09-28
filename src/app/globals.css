@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #080D0A;
+  --foreground: #F5F6F4;
+  --color-champagne: #DFCA9E;
+  --color-champagne-hover: #EFE1C6;
+  --color-gold: #DFCA9E;
+  --color-gold-hover: #EFE1C6;
+  --color-green-deep: #0C1A14;
+  --color-green-accent: #245E44;
+  --color-border: #1A2F25;
+  --color-card: #0E1914;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+*, *::before, *::after, html, body, button, input, select, textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(223, 202, 158, 0.28);
+  color: #FFFFFF;
+}
+
+/* Minimal Automotive Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080D0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A2F25;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DFCA9E;
+}
+
+/* Focus visible outline using champagne */
+*:focus-visible {
+  outline: 1px solid rgba(223, 202, 158, 0.6);
+  outline-offset: 2px;
+}
+
+/* Section anchor offset for fixed header */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
