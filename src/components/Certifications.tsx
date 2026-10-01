@@ -8,21 +8,17 @@ export const Certifications: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 sm:py-28 bg-[#0A100C] border-b border-[#1A2F25]">
+    <section id="certifications" className="py-20 sm:py-28 bg-[#0A100C] border-b border-[#1A2F25] scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="w-6 h-px bg-[#DFCA9E]" />
-            <span className="text-[11px] uppercase tracking-[0.22em] text-[#DFCA9E] font-semibold">
-              {t.certifications.eyebrow}
-            </span>
-            <span className="w-6 h-px bg-[#DFCA9E]" />
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2">
             {t.certifications.title}
           </h2>
+          <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#DFCA9E] font-semibold mb-3">
+            {t.certifications.eyebrow}
+          </p>
           <p className="text-sm sm:text-base text-[#8C9991] font-light">
             {t.certifications.subtitle}
           </p>

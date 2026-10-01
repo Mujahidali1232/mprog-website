@@ -20,7 +20,7 @@ export const deContent: SiteContent = {
     title: 'Mobile Product Genius',
     subtitle: 'Driven by Innovation. Defined by Experience.',
     description:
-      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche: wirkungsvolle Produkt- und Verkaufstrainings, strategische Beratung sowie exklusive Eventumsetzung für führende globale Marken.',
+      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche: wirkungsvolle Produkt und Verkaufstrainings, strategische Beratung sowie exklusive Eventumsetzung für führende globale Marken.',
     ctaPrimary: 'Leistungen entdecken',
     ctaSecondary: 'Kontakt aufnehmen',
     stats: [
@@ -30,11 +30,12 @@ export const deContent: SiteContent = {
     ],
   },
   about: {
-    eyebrow: 'Exzellenz & Leidenschaft',
+    eyebrow: '',
     title: 'Über Uns',
+    subtitle: 'Exzellenz & Leidenschaft',
     paragraphs: [
       'Bei der Mobile Product Genius UG sind wir von Innovation getrieben und durch Erfahrung definiert.',
-      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche sind wir spezialisiert auf die Durchführung von wirkungsvollen Produkt- und Verkaufstrainings, strategischer Beratung sowie exklusiver Eventumsetzung für führende globale Marken.',
+      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche sind wir spezialisiert auf die Durchführung von wirkungsvollen Produkt und Verkaufstrainings, strategischer Beratung sowie exklusiver Eventumsetzung für führende globale Marken.',
       'Unsere Kernkompetenz liegt darin, Wissen in messbare Performance zu transformieren. Durch innovative Trainingsmethoden, praxisnahes Coaching und ein tiefes Verständnis für Kundenverhalten befähigen wir Verkaufs- und Produktteams sowie das Management, auf höchstem Niveau zu performen.',
       'Über das Training hinaus erwecken wir Marken zum Leben. Von internationalen Automobilmessen bis hin zu exklusiven VIP-Erlebnissen schaffen wir bedeutungsvolle Interaktionen, die Kunden emotional mit der Marke verbinden und jeden Touchpoint nachhaltig prägen.',
       'Wir arbeiten in ganz Europa, dem Nahen Osten und Nordafrika und verbinden globale Standards mit kulturellem Verständnis, um konsistente und hochwertige Ergebnisse zu liefern.',
@@ -288,7 +289,7 @@ export const deContent: SiteContent = {
       'Luxury Customer Experience Specialist',
       'Automotive Retail & EV Expertise',
       'Leadership & Coaching Zertifizierungen',
-      'Herstellerzertifizierte Trainingserfahrung (BMW Group, Mercedes-Benz)',
+      'Herstellerzertifizierte Trainingserfahrung (BMW Group)',
     ],
     qualificationLabel: 'OEM-Qualifikation',
   },
@@ -524,8 +525,7 @@ export const deContent: SiteContent = {
   },
   footer: {
     tagline: 'Driven by Innovation. Defined by Experience.',
-    description:
-      'Über 15 Jahre internationale Expertise in Automobil-Trainings, Handelsberatung und VIP-Eventumsetzung in Europa, Nahost und Nordafrika.',
+    description: '',
     navigationTitle: 'Navigation',
     servicesTitle: 'Leistungen',
     serviceLinks: [

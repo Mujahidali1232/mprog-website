@@ -144,7 +144,7 @@ export const References: React.FC = () => {
             ))}
           </div>
 
-          <p className="text-xs sm:text-sm text-[#8C9991] font-light max-w-3xl border-t border-[#1A2F25] pt-5">
+          <p className="text-xs sm:text-sm text-[#DFCA9E] font-light max-w-3xl border-t border-[#1A2F25] pt-5">
             {t.references.vipOutro}
           </p>
         </div>

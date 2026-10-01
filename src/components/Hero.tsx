@@ -30,13 +30,7 @@ export const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-0">
         <div className="max-w-3xl pb-16 lg:pb-24">
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-5 h-px bg-[#DFCA9E]" />
-            <span className="text-[11px] uppercase tracking-[0.25em] text-[#DFCA9E] font-semibold">
-              {t.hero.eyebrow}
-            </span>
-          </div>
+
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.06] mb-5">

@@ -25,13 +25,13 @@ export const Footer: React.FC = () => {
             {/* Brand Column */}
             <div className="lg:col-span-4">
               <Link href="#" className="flex items-center gap-3 mb-5 group">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#DFCA9E]/35 group-hover:border-[#DFCA9E]/75 transition-colors shrink-0">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#DFCA9E]/45 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
                   <Image
                     src="/assets/images/mprog-logo.png"
                     alt="Mobile Product Genius Logo"
                     fill
                     sizes="40px"
-                    className="object-cover"
+                    className="object-contain p-[1px] rounded-full"
                   />
                 </div>
                 <div>

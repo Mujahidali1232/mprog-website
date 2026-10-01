@@ -30,6 +30,7 @@ export interface PhilosophyPillar {
 export interface AboutContent {
   eyebrow: string;
   title: string;
+  subtitle?: string;
   paragraphs: string[];
   highlight: string;
   philosophyTitle: string;

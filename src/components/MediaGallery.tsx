@@ -30,12 +30,6 @@ export const MediaGallery: React.FC = () => {
         {/* Header & Filter Bar */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#DFCA9E]" />
-              <span className="text-[11px] uppercase tracking-[0.22em] text-[#DFCA9E] font-semibold">
-                {t.media.eyebrow}
-              </span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
               {t.media.title}
             </h2>

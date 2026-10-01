@@ -110,13 +110,13 @@ export const Navbar: React.FC = () => {
               className="flex items-center gap-3 group focus:outline-none"
               aria-label="Mobile Product Genius – Home"
             >
-              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#DFCA9E]/40 group-hover:border-[#DFCA9E]/80 transition-colors duration-200 shrink-0">
+              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#DFCA9E]/50 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
                 <Image
                   src="/assets/images/mprog-logo.png"
                   alt="Mobile Product Genius Logo"
                   fill
                   sizes="40px"
-                  className="object-cover"
+                  className="object-contain p-[1px] rounded-full"
                   priority
                 />
               </div>
@@ -124,8 +124,8 @@ export const Navbar: React.FC = () => {
                 <span className="font-sans text-sm sm:text-[15px] tracking-[0.14em] text-white group-hover:text-[#DFCA9E] transition-colors duration-200 font-semibold uppercase">
                   Mobile Product Genius
                 </span>
-                <span className="text-[9px] tracking-[0.22em] text-[#DFCA9E]/80 uppercase font-normal mt-0.5">
-                  MProG · Munich · Global
+                <span className="text-[9px] tracking-[0.18em] text-[#DFCA9E]/80 uppercase font-normal mt-0.5">
+                  Driven by Innovation. Defined by Experience.
                 </span>
               </div>
             </Link>
@@ -417,13 +417,13 @@ export const Navbar: React.FC = () => {
           {/* Drawer Header */}
           <div className="flex items-center justify-between px-6 py-5 border-b border-[#1A2F25]">
             <div className="flex items-center gap-2.5">
-              <div className="relative w-8 h-8 rounded-full overflow-hidden border border-[#DFCA9E]/40 shrink-0">
+              <div className="relative w-8 h-8 rounded-full overflow-hidden border border-[#DFCA9E]/50 shrink-0 bg-white flex items-center justify-center shadow-sm">
                 <Image
                   src="/assets/images/mprog-logo.png"
                   alt="Logo"
                   fill
                   sizes="32px"
-                  className="object-cover"
+                  className="object-contain p-[1px] rounded-full"
                 />
               </div>
               <span className="text-xs font-semibold text-white tracking-[0.16em] uppercase">MProG</span>

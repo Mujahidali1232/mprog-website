@@ -23,16 +23,12 @@ export const Services: React.FC = () => {
 
         {/* Section Intro */}
         <div className="max-w-3xl mb-20 sm:mb-24">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-6 h-px bg-[#DFCA9E]" />
-            <span className="text-[11px] uppercase tracking-[0.22em] text-[#DFCA9E] font-semibold">
-              {t.servicesIntro.eyebrow}
-            </span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
             {t.servicesIntro.title}
           </h2>
-          <div className="w-8 h-px bg-[#DFCA9E] mb-6" />
+          <p className="text-base sm:text-lg text-[#DFCA9E] font-medium tracking-wide mb-5">
+            {t.servicesIntro.eyebrow}
+          </p>
           <p className="text-base sm:text-lg text-[#8C9991] font-light leading-relaxed max-w-2xl">
             {t.servicesIntro.subtitle}
           </p>
@@ -64,12 +60,7 @@ export const Services: React.FC = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#080D0A]/85 via-[#080D0A]/20 to-transparent" />
 
-                      {/* Pillar Badge */}
-                      <div className="absolute top-5 left-5">
-                        <span className="inline-block px-3 py-1 bg-[#080D0A]/85 border border-[#1A2F25] text-[10px] uppercase tracking-[0.18em] text-[#DFCA9E] font-semibold rounded-sm">
-                          {service.badge}
-                        </span>
-                      </div>
+
 
                       {/* Bottom Label */}
                       <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10">
@@ -86,10 +77,7 @@ export const Services: React.FC = () => {
                   {/* Content Column */}
                   <div className={`lg:col-span-7 flex flex-col justify-between ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
                     <div>
-                      {/* Badge */}
-                      <span className="text-[10px] uppercase tracking-[0.2em] text-[#DFCA9E] font-semibold mb-3 block">
-                        {service.badge}
-                      </span>
+
 
                       {/* Title */}
                       <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
@@ -135,7 +123,7 @@ export const Services: React.FC = () => {
 
                     {/* Outcome & CTA */}
                     <div className="pt-5 border-t border-[#1A2F25] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                      <p className="text-xs sm:text-sm text-[#8C9991] font-light leading-relaxed max-w-md">
+                      <p className="text-xs sm:text-sm text-[#DFCA9E] font-light leading-relaxed max-w-md">
                         {service.outcome}
                       </p>
                       <a

@@ -30,8 +30,9 @@ export const enContent: SiteContent = {
     ],
   },
   about: {
-    eyebrow: 'Excellence & Experience',
+    eyebrow: '',
     title: 'About Us',
+    subtitle: 'Excellence & Experience',
     paragraphs: [
       'At Mobile Product Genius, we are driven by innovation and defined by experience.',
       'With over 15 years of international expertise in the automotive industry, we specialise in delivering high-impact product and sales training, strategic consulting and premium event execution for leading global brands.',
@@ -293,7 +294,7 @@ export const enContent: SiteContent = {
       'Luxury Customer Experience Specialist',
       'Automotive Retail & EV Expertise',
       'Leadership & Coaching Certifications',
-      'Manufacturer-certified training experience (BMW Group, Mercedes-Benz)',
+      'Manufacturer-certified training experience (BMW Group)',
     ],
     qualificationLabel: 'OEM Qualification',
   },
@@ -529,8 +530,7 @@ export const enContent: SiteContent = {
   },
   footer: {
     tagline: 'Driven by Innovation. Defined by Experience.',
-    description:
-      'Over 15 years of international expertise in automotive training, dealership consulting and VIP event execution across Europe, the Middle East and North Africa.',
+    description: '',
     navigationTitle: 'Navigation',
     servicesTitle: 'Services',
     serviceLinks: [

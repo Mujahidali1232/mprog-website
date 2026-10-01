@@ -35,12 +35,6 @@ export const Contact: React.FC = () => {
 
           {/* Left: Contact Info */}
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#DFCA9E]" />
-              <span className="text-[11px] uppercase tracking-[0.22em] text-[#DFCA9E] font-semibold">
-                {t.contact.eyebrow}
-              </span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
               {t.contact.title}
             </h2>

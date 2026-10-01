@@ -20,15 +20,14 @@ export const About: React.FC = () => {
 
         {/* Section Header */}
         <div className="mb-16 sm:mb-20">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-6 h-px bg-[#DFCA9E]" />
-            <span className="text-[11px] uppercase tracking-[0.22em] text-[#DFCA9E] font-semibold">
-              {t.about.eyebrow}
-            </span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
             {t.about.title}
           </h2>
+          {t.about.subtitle ? (
+            <p className="text-base sm:text-lg text-[#DFCA9E] font-medium tracking-wide">
+              {t.about.subtitle}
+            </p>
+          ) : null}
         </div>
 
         {/* Narrative & Visual Grid */}
@@ -44,9 +43,6 @@ export const About: React.FC = () => {
               <p className="text-lg sm:text-xl text-white font-medium leading-snug">
                 &ldquo;{t.about.highlight}&rdquo;
               </p>
-              <span className="block mt-3 text-[10px] uppercase tracking-[0.2em] text-[#DFCA9E] font-semibold">
-                Mobile Product Genius UG · Munich · Global
-              </span>
             </div>
           </div>
 

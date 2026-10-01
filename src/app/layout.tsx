@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: 'Mobile Product Genius',
     title: 'Mobile Product Genius | Driven by Innovation. Defined by Experience.',
     description:
-      'Wirkungsvolle Produkt- und Verkaufstrainings, strategische Beratung und exklusive VIP-Eventumsetzung für führende globale Luxusmarken.',
+      'Wirkungsvolle Produkt und Verkaufstrainings, strategische Beratung und exklusive VIP-Eventumsetzung für führende globale Luxusmarken.',
     images: [
       {
         url: '/assets/images/hero-saidi-bmw7.jpg',
