@@ -39,55 +39,55 @@ export const Navbar: React.FC = () => {
   // Structured navigation definition
   const navData = {
     about: {
-      label: 'ABOUT',
+      label: language === 'de' ? 'ÜBER UNS' : 'ABOUT',
       href: '#about',
     },
     services: {
-      label: 'SERVICES',
+      label: language === 'de' ? 'LEISTUNGEN' : 'SERVICES',
       href: '#services',
       items: [
         {
-          label: 'Training & Coaching',
+          label: language === 'de' ? 'Training & Coaching' : 'Training & Coaching',
           href: '#training-coaching',
           desc: language === 'de' ? 'Produkt-, EV- & Vertriebstraining' : 'Product, EV & Sales Mindset Training',
         },
         {
-          label: 'Advice',
+          label: language === 'de' ? 'Beratung' : 'Advice',
           href: '#consulting',
           desc: language === 'de' ? 'Automobilhandel & Prozessoptimierung' : 'Dealership & Process Optimization',
         },
         {
-          label: 'Events & VIP',
+          label: language === 'de' ? 'Events & VIP' : 'Events & VIP',
           href: '#events-vip',
           desc: language === 'de' ? 'Markenerlebnisse & VIP Hospitality' : 'Brand Experiences & VIP Hospitality',
         },
       ],
     },
     expertise: {
-      label: 'EXPERTISE',
+      label: language === 'de' ? 'EXPERTISE' : 'EXPERTISE',
       href: '#certifications',
     },
     insights: {
-      label: 'INSIGHTS',
+      label: language === 'de' ? 'EINBLICKE' : 'INSIGHTS',
       href: '#references',
       items: [
         {
-          label: 'References',
+          label: language === 'de' ? 'Referenzen' : 'References',
           href: '#references',
           desc: language === 'de' ? 'Automobilpartner & internationale VIP-Gäste' : 'Automotive OEMs & Global VIP Delegations',
         },
         {
-          label: 'Media Library',
+          label: language === 'de' ? 'Mediathek' : 'Media Library',
           href: '#media',
           desc: language === 'de' ? 'Video- & Fotogalerie in Aktion' : 'Video & Photo Showcase in Action',
         },
       ],
     },
     contact: {
-      label: 'CONTACT',
+      label: language === 'de' ? 'KONTAKT' : 'CONTACT',
       href: '#contact',
     },
-    cta: 'REQUEST A PROJECT',
+    cta: language === 'de' ? 'PROJEKT ANFRAGEN' : 'REQUEST A PROJECT',
   };
 
   return (
