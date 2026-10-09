@@ -25,12 +25,12 @@ export const Footer: React.FC = () => {
             {/* Brand Column */}
             <div className="lg:col-span-4">
               <Link href="#" className="flex items-center gap-3 mb-5 group">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#DFCA9E]/45 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
+                <div className="relative w-14 h-14 rounded-full overflow-hidden border border-[#DFCA9E]/45 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
                   <Image
                     src="/assets/images/mprog-logo.png"
                     alt="Mobile Product Genius Logo"
                     fill
-                    sizes="40px"
+                    sizes="56px"
                     className="object-contain p-[1px] rounded-full"
                   />
                 </div>
@@ -39,14 +39,10 @@ export const Footer: React.FC = () => {
                     Mobile Product Genius
                   </span>
                   <span className="text-[9px] uppercase tracking-[0.18em] text-[#DFCA9E]/75 font-normal">
-                    UG (haftungsbeschränkt)
+                    Driven by Innovation. Defined by Experience.
                   </span>
                 </div>
               </Link>
-
-              <p className="text-sm text-[#DFCA9E] mb-4 leading-snug font-normal">
-                &ldquo;{t.footer.tagline}&rdquo;
-              </p>
 
               <p className="text-xs text-[#8C9991] font-light leading-relaxed max-w-xs">
                 {t.footer.description}

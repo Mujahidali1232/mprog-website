@@ -20,28 +20,36 @@ export interface LibraryImage {
 }
 
 export const ALL_LIBRARY_IMAGES: LibraryImage[] = [
-  { id: 'hero-saidi', src: '/assets/images/hero-saidi-bmw7.jpg', title: 'Saidi & BMW 7 Series Flagship', resolution: '5760 x 3840 (Master)', category: 'hero' },
-  { id: 'event-keynote', src: '/assets/images/event-keynote-stage.jpg', title: 'Keynote & Stage Presentation', resolution: '9504 x 6336 (Master)', category: 'events' },
-  { id: 'training-coaching', src: '/assets/images/training-coaching-car.jpg', title: 'In-Vehicle Coaching & Showroom', resolution: '6000 x 4000 (Master)', category: 'training' },
-  { id: 'consulting-dealership', src: '/assets/images/consulting-dealership-1.jpg', title: 'Dealership & Retail Consulting', resolution: '6000 x 4000 (Master)', category: 'training' },
-  { id: 'event-bmw-i8', src: '/assets/images/event-bmw-i8-delegation.jpg', title: 'BMW i8 Delegation Presentation', resolution: '2448 x 2448 (Master)', category: 'events' },
-  { id: 'event-gims', src: '/assets/images/event-bmw-genius-gims.jpg', title: 'Geneva Motor Show (GIMS)', resolution: '5184 x 3456 (Master)', category: 'events' },
-  { id: 'event-atmosphere', src: '/assets/images/event-atmosphere-wide.jpg', title: 'International Motor Show Atmosphere', resolution: '5472 x 3648 (Master)', category: 'events' },
-  { id: 'event-bmw7-vip', src: '/assets/images/event-bmw7-vip.jpg', title: 'BMW 7 Series VIP Experience', resolution: '5568 x 3840 (Master)', category: 'events' },
-  { id: 'event-vip-hospitality', src: '/assets/images/event-vip-hospitality.jpg', title: 'Luxury VIP Guest Hospitality', resolution: '4000 x 5000 (Master)', category: 'events' },
-  { id: 'training-bmw-xm', src: '/assets/images/training-bmw-xm.jpg', title: 'BMW XM High-Performance Training', resolution: '6000 x 4000 (Master)', category: 'training' },
-  { id: 'training-classroom', src: '/assets/images/training-classroom.jpg', title: 'Interactive Workshop & Classroom', resolution: '6000 x 4000 (Master)', category: 'training' },
-  { id: 'training-group', src: '/assets/images/training-group.jpg', title: 'Group Training & Team Coaching', resolution: '6000 x 4000 (Master)', category: 'training' },
-  { id: 'training-connecteddrive', src: '/assets/images/training-connecteddrive.jpg', title: 'ConnectedDrive Digital Innovations', resolution: '3264 x 2448 (Master)', category: 'training' },
-  { id: 'training-product', src: '/assets/images/training-product.jpg', title: 'Product Genius Specialist Training', resolution: '6000 x 4000 (Master)', category: 'training' },
+  { id: 'prod-pres-1', src: '/assets/images/Product presentation 1.jpg', title: 'Product Presentation & Keynote', resolution: 'Master High-Res', category: 'hero' },
+  { id: 'modaration', src: '/assets/images/Modaration.JPG', title: 'Stage Moderation & Keynote Presentation', resolution: 'Master High-Res', category: 'events' },
+  { id: 'prod-train-1', src: '/assets/images/Product Training 1.JPG', title: 'Product & Technical Training I', resolution: 'Master High-Res', category: 'training' },
+  { id: 'prod-train-2', src: '/assets/images/Product Training 2.JPG', title: 'Product & Technical Training II', resolution: 'Master High-Res', category: 'training' },
+  { id: 'event-1', src: '/assets/images/Event 1.jpg', title: 'Automotive Event & Live Stage Presentation', resolution: 'Master High-Res', category: 'events' },
+  { id: 'event-2', src: '/assets/images/Event 2.JPG', title: 'Vehicle Launch & Brand Activation', resolution: 'Master High-Res', category: 'events' },
+  { id: 'event-3', src: '/assets/images/Event 3.JPG', title: 'Automotive Exhibition & Live Presentation', resolution: 'Master High-Res', category: 'events' },
+  { id: 'event-4', src: '/assets/images/Event 4.jpeg', title: 'VIP Guest Activation & Event Experience', resolution: 'Master High-Res', category: 'events' },
+  { id: 'event-5', src: '/assets/images/Event 5.jpg', title: 'Showroom Opening & Brand Experience', resolution: 'Master High-Res', category: 'events' },
+  { id: 'event-6', src: '/assets/images/Event 6.jpg', title: 'International Motor Show Highlights', resolution: 'Master High-Res', category: 'events' },
+  { id: 'concorso', src: '/assets/images/Concorso de eleganze.jpg', title: 'Concorso d\'Eleganza Villa d\'Este', resolution: 'Master High-Res', category: 'events' },
+  { id: 'gims', src: '/assets/images/Exhibition Genva motor show.JPG', title: 'Geneva International Motor Show', resolution: 'Master High-Res', category: 'events' },
+  { id: 'exhibition', src: '/assets/images/Exhibition.jpg', title: 'Exhibition & Brand Showcase', resolution: 'Master High-Res', category: 'events' },
+  { id: 'iaa-munich', src: '/assets/images/IAA Munich 2026.JPEG', title: 'IAA Mobility Munich Exhibition', resolution: 'Master High-Res', category: 'events' },
+  { id: 'modaratio', src: '/assets/images/Modaratio.JPG', title: 'Live Stage Moderation', resolution: 'Master High-Res', category: 'events' },
+  { id: 'prod-pres-2', src: '/assets/images/Product Presentation 2.jpg', title: 'Flagship Product Presentation', resolution: 'Master High-Res', category: 'events' },
+  { id: 'prod-pres-main', src: '/assets/images/Product presentation.JPG', title: 'Live Vehicle Presentation', resolution: 'Master High-Res', category: 'events' },
+  { id: 'training-main', src: '/assets/images/training .JPG', title: 'Interactive Sales & Product Training', resolution: 'Master High-Res', category: 'training' },
+  { id: 'training-6', src: '/assets/images/Training 6.JPG', title: 'Showroom & Retail Team Coaching', resolution: 'Master High-Res', category: 'training' },
+  { id: 'vip-1', src: '/assets/images/VIP 1.JPG', title: 'VIP Delegation & Guest Hosting I', resolution: 'Master High-Res', category: 'events' },
+  { id: 'vip-2', src: '/assets/images/VIP 2.JPG', title: 'VIP Delegation & Guest Hosting II', resolution: 'Master High-Res', category: 'events' },
+  { id: 'vip-main', src: '/assets/images/vip.jpg', title: 'Exclusive VIP Hospitality Experience', resolution: 'Master High-Res', category: 'events' },
 ];
 
 const DEFAULT_SELECTIONS: ImageSelectionMap = {
-  hero: '/assets/images/hero-saidi-bmw7.jpg',
-  about: '/assets/images/event-keynote-stage.jpg',
-  pillar1: '/assets/images/training-coaching-car.jpg',
-  pillar2: '/assets/images/consulting-dealership-1.jpg',
-  pillar3: '/assets/images/event-bmw-i8-delegation.jpg',
+  hero: '/assets/images/Product presentation 1.jpg',
+  about: '/assets/images/Modaration.JPG',
+  pillar1: '/assets/images/Product Training 1.JPG',
+  pillar2: '/assets/images/Product Training 2.JPG',
+  pillar3: '/assets/images/Event 1.jpg',
 };
 
 interface ImageContextType {
@@ -61,8 +69,11 @@ export const ImageProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     try {
       const saved = localStorage.getItem('mprog_custom_images');
-      if (saved) {
-        setImages(JSON.parse(saved));
+      if (saved && saved.trim()) {
+        const parsed = JSON.parse(saved);
+        if (parsed && typeof parsed === 'object') {
+          setImages(parsed);
+        }
       }
     } catch {
       // fallback to default

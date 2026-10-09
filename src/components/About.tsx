@@ -51,7 +51,7 @@ export const About: React.FC = () => {
             <div className="relative rounded overflow-hidden group border border-[#1A2F25]">
               <div className="relative aspect-[4/5] w-full">
                 <Image
-                  src={images.about || "/assets/images/event-keynote-stage.jpg"}
+                  src={images.about || "/assets/images/Modaration.JPG"}
                   alt="Mobile Product Genius Keynote Stage Experience"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -86,17 +86,19 @@ export const About: React.FC = () => {
             {t.about.philosophy.map((item, idx) => (
               <div
                 key={idx}
-                className="group p-6 bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-colors duration-200 rounded"
+                className="group p-6 bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-all duration-300 ease-in-out rounded hover:-translate-y-1 hover:shadow-lg hover:shadow-[#DFCA9E]/5 cursor-pointer"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
+                <div className="flex items-center gap-3 transition-all duration-300 mb-0 group-hover:mb-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0 transition-transform duration-300 group-hover:scale-125" />
                   <h4 className="text-base font-semibold text-white">
                     {item.title}
                   </h4>
                 </div>
-                <p className="text-sm text-[#8C9991] leading-relaxed font-light">
-                  {item.description}
-                </p>
+                <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                  <p className="text-sm text-[#8C9991] leading-relaxed font-light">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -105,10 +107,9 @@ export const About: React.FC = () => {
         {/* Key Strengths */}
         <div className="bg-[#0E1914] border border-[#1A2F25] rounded p-8 sm:p-10">
           <div className="mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white">
               {t.about.strengthsTitle}
             </h3>
-            <div className="w-8 h-px bg-[#DFCA9E]" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

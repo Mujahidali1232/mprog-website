@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { useImages } from '@/context/ImageContext';
-import { ChevronRight, ArrowDown } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const { t } = useLanguage();
@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={images.hero || "/assets/images/hero-saidi-bmw7.jpg"}
+          src={images.hero || "/assets/images/Product presentation 1.jpg"}
           alt="Mobile Product Genius – Keynote Stage with BMW 7 Series"
           fill
           priority
@@ -47,23 +47,7 @@ export const Hero: React.FC = () => {
             {t.hero.description}
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] font-semibold text-xs uppercase tracking-[0.12em] transition-all duration-200 rounded-sm shadow-sm"
-            >
-              <span>{t.hero.ctaPrimary}</span>
-              <ChevronRight className="w-4 h-4" />
-            </a>
 
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 border border-[#1A2F25] hover:border-[#DFCA9E]/50 bg-[#0E1914]/50 hover:bg-[#0E1914] text-white hover:text-[#DFCA9E] font-medium text-xs uppercase tracking-[0.12em] transition-all duration-200 rounded-sm"
-            >
-              <span>{t.hero.ctaSecondary}</span>
-            </a>
-          </div>
         </div>
 
         {/* Stats Strip */}

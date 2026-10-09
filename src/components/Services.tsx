@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { useImages } from '@/context/ImageContext';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export const Services: React.FC = () => {
   const { t } = useLanguage();
@@ -60,13 +60,8 @@ export const Services: React.FC = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#080D0A]/85 via-[#080D0A]/20 to-transparent" />
 
-
-
                       {/* Bottom Label */}
                       <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10">
-                        <div className="text-[10px] uppercase tracking-[0.18em] text-[#DFCA9E] font-semibold mb-1">
-                          Mobile Product Genius
-                        </div>
                         <h4 className="text-xl font-bold text-white leading-tight">
                           {service.title}
                         </h4>
@@ -77,7 +72,6 @@ export const Services: React.FC = () => {
                   {/* Content Column */}
                   <div className={`lg:col-span-7 flex flex-col justify-between ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
                     <div>
-
 
                       {/* Title */}
                       <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
@@ -121,18 +115,11 @@ export const Services: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Outcome & CTA */}
-                    <div className="pt-5 border-t border-[#1A2F25] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    {/* Outcome */}
+                    <div className="pt-5 border-t border-[#1A2F25]">
                       <p className="text-xs sm:text-sm text-[#DFCA9E] font-light leading-relaxed max-w-md">
                         {service.outcome}
                       </p>
-                      <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.12em] font-semibold text-[#DFCA9E] hover:text-white transition-colors duration-200 shrink-0 group"
-                      >
-                        <span>{t.servicesIntro.inquireLabel}</span>
-                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" />
-                      </a>
                     </div>
                   </div>
 

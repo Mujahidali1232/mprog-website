@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useImages, ALL_LIBRARY_IMAGES } from '@/context/ImageContext';
-import { X, Check, RefreshCw, Image as ImageIcon, Sliders, Eye } from 'lucide-react';
+import { X, Check, RefreshCw, Image as ImageIcon, Eye } from 'lucide-react';
 
 interface SectionDefinition {
   key: string;
@@ -57,16 +57,7 @@ export const PictureSelectorModal: React.FC = () => {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   if (!isSelectorOpen) {
-    return (
-      <button
-        onClick={() => setIsSelectorOpen(true)}
-        className="fixed bottom-5 right-5 z-40 flex items-center gap-2.5 px-4 py-2.5 bg-[#0C1712] border border-[#DFCA9E]/60 text-[#DFCA9E] text-xs font-semibold uppercase tracking-[0.14em] rounded-full shadow-2xl hover:bg-[#DFCA9E] hover:text-[#080D0A] transition-all duration-300 group"
-        title="Review & Define Pictures for Every Page"
-      >
-        <Sliders className="w-4 h-4 text-[#DFCA9E] group-hover:text-[#080D0A] transition-colors" />
-        <span>Review & Select Pictures</span>
-      </button>
-    );
+    return null;
   }
 
   return (
@@ -89,7 +80,7 @@ export const PictureSelectorModal: React.FC = () => {
 
           <div className="flex items-center gap-3">
             <button
-              onClick={resetToDefaults}
+              onClick={() => resetToDefaults()}
               className="flex items-center gap-1.5 px-3 py-1.5 border border-[#1A2F25] hover:border-[#DFCA9E]/50 text-[#8C9991] hover:text-white text-xs uppercase tracking-[0.1em] rounded transition-colors"
             >
               <RefreshCw className="w-3.5 h-3.5" />

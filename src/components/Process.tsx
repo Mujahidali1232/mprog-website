@@ -18,9 +18,11 @@ export const Process: React.FC = () => {
           <p className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#DFCA9E] font-semibold mb-4">
             {t.process.eyebrow}
           </p>
-          <p className="text-sm sm:text-base text-[#8C9991] font-light max-w-xl mx-auto">
-            {t.process.subtitle}
-          </p>
+          {t.process.subtitle ? (
+            <p className="text-sm sm:text-base text-[#8C9991] font-light max-w-xl mx-auto">
+              {t.process.subtitle}
+            </p>
+          ) : null}
         </div>
 
         {/* Steps Grid */}

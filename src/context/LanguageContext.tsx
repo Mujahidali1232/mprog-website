@@ -41,12 +41,13 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, []);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
+    const targetLang: Language = lang === 'en' ? 'en' : 'de';
+    setLanguageState(targetLang);
     if (typeof document !== 'undefined') {
-      document.documentElement.lang = lang;
+      document.documentElement.lang = targetLang;
     }
     try {
-      localStorage.setItem('mprog_lang', lang);
+      localStorage.setItem('mprog_lang', targetLang);
     } catch {
       // Ignore
     }

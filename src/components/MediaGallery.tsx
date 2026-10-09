@@ -12,16 +12,21 @@ export const MediaGallery: React.FC = () => {
 
   const selectedItem = selectedId ? t.media.items.find((item) => item.id === selectedId) || null : null;
 
-  const filteredItems = t.media.items.filter((item) => {
-    if (activeFilter === 'all') return true;
-    return item.category === activeFilter;
-  });
-
   const filterButtons: { key: 'all' | 'training' | 'events'; label: string }[] = [
     { key: 'all', label: t.media.filters.all },
     { key: 'training', label: t.media.filters.training },
     { key: 'events', label: t.media.filters.events },
   ];
+
+  // Helper to sort category items: Video cards first at top, Photo cards below
+  const getSortedCategoryItems = (category: 'training' | 'events') => {
+    return t.media.items
+      .filter((item) => item.category === category)
+      .sort((a, b) => (a.type === 'video' ? -1 : b.type === 'video' ? 1 : 0));
+  };
+
+  const trainingItems = getSortedCategoryItems('training');
+  const eventsItems = getSortedCategoryItems('events');
 
   return (
     <section id="media" className="py-24 sm:py-32 bg-[#0A100C] border-b border-[#1A2F25] scroll-mt-20">
@@ -65,12 +70,12 @@ export const MediaGallery: React.FC = () => {
                 {t.media.categoryLabels.training}
               </h3>
               <span className="text-xs text-[#8C9991] uppercase tracking-[0.15em] ml-auto">
-                {t.media.items.filter(i => i.category === 'training').length} Items
+                {trainingItems.length} Items
               </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {t.media.items.filter(item => item.category === 'training').map((item) => (
+              {trainingItems.map((item) => (
                 <div
                   key={item.id}
                   onClick={() => setSelectedId(item.id)}
@@ -99,17 +104,10 @@ export const MediaGallery: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="p-5 flex-1 flex flex-col">
-                    <h4 className="text-base font-bold text-white mb-1.5 leading-snug">
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-center">
+                    <h4 className="text-base font-bold text-white leading-snug">
                       {item.title}
                     </h4>
-                    <p className="text-xs text-[#7A8780] font-light leading-relaxed flex-1">
-                      {item.description}
-                    </p>
-                    <div className="mt-4 pt-3 border-t border-[#1A2F25] flex items-center justify-between text-[10px] text-[#DFCA9E] font-semibold uppercase tracking-[0.1em]">
-                      <span>{item.type === 'video' ? t.media.playLabel : t.media.viewLabel}</span>
-                      <span>&rarr;</span>
-                    </div>
                   </div>
                 </div>
               ))}
@@ -126,12 +124,12 @@ export const MediaGallery: React.FC = () => {
                 {t.media.categoryLabels.events}
               </h3>
               <span className="text-xs text-[#8C9991] uppercase tracking-[0.15em] ml-auto">
-                {t.media.items.filter(i => i.category === 'events').length} Items
+                {eventsItems.length} Items
               </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {t.media.items.filter(item => item.category === 'events').map((item) => (
+              {eventsItems.map((item) => (
                 <div
                   key={item.id}
                   onClick={() => setSelectedId(item.id)}
@@ -160,17 +158,10 @@ export const MediaGallery: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="p-5 flex-1 flex flex-col">
-                    <h4 className="text-base font-bold text-white mb-1.5 leading-snug">
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-center">
+                    <h4 className="text-base font-bold text-white leading-snug">
                       {item.title}
                     </h4>
-                    <p className="text-xs text-[#7A8780] font-light leading-relaxed flex-1">
-                      {item.description}
-                    </p>
-                    <div className="mt-4 pt-3 border-t border-[#1A2F25] flex items-center justify-between text-[10px] text-[#DFCA9E] font-semibold uppercase tracking-[0.1em]">
-                      <span>{item.type === 'video' ? t.media.playLabel : t.media.viewLabel}</span>
-                      <span>&rarr;</span>
-                    </div>
                   </div>
                 </div>
               ))}
@@ -202,10 +193,11 @@ export const MediaGallery: React.FC = () => {
               {selectedItem.type === 'video' ? (
                 <div className="relative aspect-video w-full rounded overflow-hidden bg-black">
                   <video
+                    key={selectedItem.src}
                     src={selectedItem.src}
                     controls
-                    autoPlay
                     playsInline
+                    preload="metadata"
                     className="w-full h-full object-contain"
                   >
                     Your browser does not support the video tag.

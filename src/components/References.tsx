@@ -13,15 +13,14 @@ export const References: React.FC = () => {
 
         {/* Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-6 h-px bg-[#DFCA9E]" />
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
+            {t.references.title}
+          </h2>
+          <div className="mb-4">
             <span className="text-[11px] uppercase tracking-[0.22em] text-[#DFCA9E] font-semibold">
               {t.references.eyebrow}
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4">
-            {t.references.title}
-          </h2>
           <p className="text-base text-[#8C9991] font-light max-w-2xl">
             {t.references.subtitle}
           </p>

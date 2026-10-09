@@ -4,12 +4,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
-import { useImages } from '@/context/ImageContext';
-import { Menu, X, ChevronDown, ArrowRight, Sliders } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const { language, setLanguage } = useLanguage();
-  const { setIsSelectorOpen } = useImages();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<'services' | 'insights' | null>(null);
@@ -96,10 +94,10 @@ export const Navbar: React.FC = () => {
     <>
       <header
         ref={navRef}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-[#000000] transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#080D0A]/98 border-b border-[#1A2F25] shadow-lg shadow-black/50 py-3'
-            : 'bg-[#080D0A]/85 backdrop-blur-md border-b border-[#1A2F25]/60 py-4'
+            ? 'border-b border-[#1A2F25] shadow-lg shadow-black/50 py-3'
+            : 'backdrop-blur-md border-b border-[#1A2F25]/60 py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,12 +108,12 @@ export const Navbar: React.FC = () => {
               className="flex items-center gap-3 group focus:outline-none"
               aria-label="Mobile Product Genius – Home"
             >
-              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-[#DFCA9E]/50 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
+              <div className="relative w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden border border-[#DFCA9E]/50 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
                 <Image
                   src="/assets/images/mprog-logo.png"
                   alt="Mobile Product Genius Logo"
                   fill
-                  sizes="40px"
+                  sizes="56px"
                   className="object-contain p-[1px] rounded-full"
                   priority
                 />
@@ -131,11 +129,11 @@ export const Navbar: React.FC = () => {
             </Link>
 
             {/* Desktop Refined Navigation Links: ABOUT, SERVICES, EXPERTISE, INSIGHTS, CONTACT */}
-            <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-8 shrink-0">
               {/* ABOUT */}
               <a
                 href={navData.about.href}
-                className="text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.16em] uppercase py-2"
+                className="text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2"
               >
                 {navData.about.label}
               </a>
@@ -148,11 +146,10 @@ export const Navbar: React.FC = () => {
               >
                 <a
                   href={navData.services.href}
-                  className={`flex items-center gap-1.5 text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.16em] uppercase py-2 ${
+                  className={`flex items-center gap-1.5 text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 ${
                     openDropdown === 'services' ? 'text-white' : 'text-[#A0A0AB] hover:text-white'
                   }`}
                   onClick={(e) => {
-                    // Allow navigation on click or toggle dropdown
                     if (window.innerWidth >= 1024) {
                       setOpenDropdown(openDropdown === 'services' ? null : 'services');
                     }
@@ -214,7 +211,7 @@ export const Navbar: React.FC = () => {
               {/* EXPERTISE */}
               <a
                 href={navData.expertise.href}
-                className="text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.16em] uppercase py-2"
+                className="text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2"
               >
                 {navData.expertise.label}
               </a>
@@ -227,7 +224,7 @@ export const Navbar: React.FC = () => {
               >
                 <a
                   href={navData.insights.href}
-                  className={`flex items-center gap-1.5 text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.16em] uppercase py-2 ${
+                  className={`flex items-center gap-1.5 text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 ${
                     openDropdown === 'insights' ? 'text-white' : 'text-[#A0A0AB] hover:text-white'
                   }`}
                   onClick={(e) => {
@@ -285,17 +282,25 @@ export const Navbar: React.FC = () => {
               {/* CONTACT */}
               <a
                 href={navData.contact.href}
-                className="text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.16em] uppercase py-2"
+                className="text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2"
               >
                 {navData.contact.label}
               </a>
             </nav>
 
-            {/* Right Action Bar: EN | DE  +  REQUEST A PROJECT */}
-            <div className="hidden sm:flex items-center gap-3">
-              {/* Language Switcher: EN | DE (EN first, DE second as requested) */}
+            {/* Right Action Bar: REQUEST A PROJECT  +  EN | DE */}
+            <div className="hidden sm:flex items-center gap-2.5 xl:gap-3 shrink-0">
+              {/* Main CTA: REQUEST A PROJECT */}
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-4 xl:px-5 py-2.5 rounded-sm text-[11px] font-semibold uppercase tracking-[0.12em] xl:tracking-[0.14em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
+              >
+                {navData.cta}
+              </a>
+
+              {/* Language Switcher: EN | DE (Absolute Far Right) */}
               <div
-                className="flex items-center rounded-sm border border-[#1A2F25] bg-[#0E1914] p-0.5"
+                className="flex items-center rounded-sm border border-[#1A2F25] bg-[#0E1914] p-0.5 shrink-0"
                 role="group"
                 aria-label="Language selection"
               >
@@ -326,31 +331,12 @@ export const Navbar: React.FC = () => {
                   DE
                 </button>
               </div>
-
-              {/* Picture Manager Tool Trigger */}
-              <button
-                type="button"
-                onClick={() => setIsSelectorOpen(true)}
-                className="hidden xl:inline-flex items-center gap-1.5 px-3 py-2 rounded-sm border border-[#DFCA9E]/40 text-[#DFCA9E] hover:bg-[#DFCA9E] hover:text-[#080D0A] text-[11px] font-semibold uppercase tracking-[0.14em] transition-all duration-200"
-                title="Review & Define Pictures for Every Page"
-              >
-                <Sliders className="w-3.5 h-3.5" />
-                <span>Pictures</span>
-              </button>
-
-              {/* Main CTA: REQUEST A PROJECT */}
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center px-5 py-2.5 rounded-sm text-[11px] font-semibold uppercase tracking-[0.14em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15"
-              >
-                {navData.cta}
-              </a>
             </div>
 
-            {/* Mobile Controls (Hamburger + Language) */}
-            <div className="flex sm:hidden items-center gap-2">
+            {/* Mobile / Tablet Controls (Hamburger + Language) */}
+            <div className="flex lg:hidden items-center gap-2">
               <div
-                className="flex items-center rounded-sm border border-[#1A2F25] bg-[#0E1914] p-0.5"
+                className="flex sm:hidden items-center rounded-sm border border-[#1A2F25] bg-[#0E1914] p-0.5"
                 role="group"
                 aria-label="Language selection"
               >
@@ -417,12 +403,12 @@ export const Navbar: React.FC = () => {
           {/* Drawer Header */}
           <div className="flex items-center justify-between px-6 py-5 border-b border-[#1A2F25]">
             <div className="flex items-center gap-2.5">
-              <div className="relative w-8 h-8 rounded-full overflow-hidden border border-[#DFCA9E]/50 shrink-0 bg-white flex items-center justify-center shadow-sm">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#DFCA9E]/50 shrink-0 bg-white flex items-center justify-center shadow-sm">
                 <Image
                   src="/assets/images/mprog-logo.png"
                   alt="Logo"
                   fill
-                  sizes="32px"
+                  sizes="40px"
                   className="object-contain p-[1px] rounded-full"
                 />
               </div>
