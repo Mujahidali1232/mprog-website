@@ -26,7 +26,7 @@ export const enContent: SiteContent = {
     stats: [
       { value: '15+', label: 'Years Experience', sublabel: 'Automotive industry globally' },
       { value: '25+', label: 'Countries', sublabel: 'Europe, Middle East, North Africa' },
-      { value: '35+', label: 'AUTOMOTIVE & HOTELS', sublabel: 'Brands' },
+      { value: '35+', label: 'AUTOMOTIVE & HOSPITALITY', sublabel: 'Brands' },
     ],
   },
   about: {
@@ -43,7 +43,7 @@ export const enContent: SiteContent = {
     highlight:
       'At Mobile Product Genius UG, innovation drives everything we do and exceptional experiences define the outcome.',
     philosophyTitle: 'Our Philosophy & Approach',
-    philosophySubtitle: 'Our work is guided by clear principles:',
+    philosophySubtitle: 'Our work is guided by clear principles',
     philosophy: [
       {
         title: 'Innovation-driven',
@@ -276,11 +276,11 @@ export const enContent: SiteContent = {
       },
       {
         name: 'Middle East',
-        description: 'VIP activations, brand representation and high-profile events.',
+        description: 'Manufacturer, importer and retail network support.',
       },
       {
         name: 'North Africa',
-        description: 'Dealership training, product launches and network development.',
+        description: 'Manufacturer, importer and retail network support.',
       },
     ],
   },
@@ -294,7 +294,7 @@ export const enContent: SiteContent = {
       'Luxury Customer Experience Specialist',
       'Automotive Retail & EV Expertise',
       'Leadership & Coaching Certifications',
-      'Manufacturer-certified training experience (BMW Group)',
+      'Manufacturer-certified training experience',
     ],
     qualificationLabel: 'OEM Qualification',
   },
@@ -405,6 +405,22 @@ export const enContent: SiteContent = {
         type: 'image',
         src: '/assets/images/Training 6.JPG',
         description: 'On-the-job showroom coaching and performance steering.',
+      },
+      {
+        id: 'img-training-coaching',
+        title: 'In-Vehicle & Showroom Coaching',
+        category: 'training',
+        type: 'image',
+        src: '/assets/images/training-coaching-car.jpg',
+        description: 'Hands-on showroom and in-vehicle coaching.',
+      },
+      {
+        id: 'img-training-classroom',
+        title: 'Product Launch & Classroom Training',
+        category: 'training',
+        type: 'image',
+        src: '/assets/images/training-classroom.jpg',
+        description: 'Interactive classroom training methodology.',
       },
 
       // Events Videos (Placed at top)

@@ -61,11 +61,13 @@ export const Services: React.FC = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-[#080D0A]/85 via-[#080D0A]/20 to-transparent" />
 
                       {/* Bottom Label */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10">
-                        <h4 className="text-xl font-bold text-white leading-tight">
-                          {service.title}
-                        </h4>
-                      </div>
+                      {service.id !== 'consulting' && (
+                        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10">
+                          <h4 className="text-xl font-bold text-white leading-tight">
+                            {service.title}
+                          </h4>
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -75,7 +77,15 @@ export const Services: React.FC = () => {
 
                       {/* Title */}
                       <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
-                        {service.title}
+                        {service.id === 'events-vip' && service.title.includes('& ') ? (
+                          <>
+                            {service.title.split('& ')[0]}&amp;
+                            <br />
+                            {service.title.split('& ')[1]}
+                          </>
+                        ) : (
+                          service.title
+                        )}
                       </h3>
 
                       {/* Tagline */}
@@ -93,23 +103,25 @@ export const Services: React.FC = () => {
                         {service.categories.map((cat, catIdx) => (
                           <div
                             key={catIdx}
-                            className="p-5 bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/30 transition-colors duration-200 rounded"
+                            className="group p-5 bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-all duration-300 ease-in-out rounded hover:-translate-y-1 hover:shadow-lg hover:shadow-[#DFCA9E]/5 cursor-pointer"
                           >
-                            <h4 className="text-xs sm:text-sm font-semibold text-white mb-3 flex items-center gap-2">
-                              <span className="w-1 h-3 bg-[#DFCA9E] rounded-full shrink-0" />
+                            <h4 className="text-xs sm:text-sm font-semibold text-white transition-all duration-300 mb-0 group-hover:mb-3 flex items-center gap-2">
+                              <span className="w-1 h-3 bg-[#DFCA9E] rounded-full shrink-0 transition-transform duration-300 group-hover:scale-125" />
                               {cat.title}
                             </h4>
-                            <ul className="space-y-2">
-                              {cat.items.map((item, itemIdx) => (
-                                <li
-                                  key={itemIdx}
-                                  className="text-xs text-[#8C9991] flex items-start gap-2"
-                                >
-                                  <Check className="w-3 h-3 text-[#DFCA9E]/80 shrink-0 mt-0.5" />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
+                            <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-60 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                              <ul className="space-y-2">
+                                {cat.items.map((item, itemIdx) => (
+                                  <li
+                                    key={itemIdx}
+                                    className="text-xs text-[#8C9991] flex items-start gap-2"
+                                  >
+                                    <Check className="w-3 h-3 text-[#DFCA9E]/80 shrink-0 mt-0.5" />
+                                    <span>{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
                         ))}
                       </div>

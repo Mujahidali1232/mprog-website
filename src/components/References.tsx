@@ -27,12 +27,12 @@ export const References: React.FC = () => {
         </div>
 
         {/* 3 Reference Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8 items-start">
 
           {/* Automotive Partners */}
-          <div className="flex flex-col bg-[#0E1914] border border-[#1A2F25] rounded overflow-hidden">
+          <div className="group flex flex-col bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-all duration-300 ease-in-out rounded overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:shadow-[#DFCA9E]/5 cursor-pointer">
             <div className="p-6 sm:p-7 flex-1">
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 transition-all duration-300 mb-0 group-hover:mb-6">
                 <div className="p-2.5 bg-[#0A100C] border border-[#1A2F25] rounded">
                   <Car className="w-5 h-5 text-[#DFCA9E]" />
                 </div>
@@ -40,17 +40,19 @@ export const References: React.FC = () => {
                   {t.references.automotiveTitle}
                 </h3>
               </div>
-              <ul className="space-y-2.5">
-                {t.references.automotivePartners.map((partner, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center gap-2.5 text-sm text-[#8C9991] pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
-                    <span className="font-medium text-[#E0E5E2]">{partner}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[420px] group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                <ul className="space-y-2.5">
+                  {t.references.automotivePartners.map((partner, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2.5 text-sm text-[#8C9991] pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
+                      <span className="font-medium text-[#E0E5E2]">{partner}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="px-6 py-3 border-t border-[#1A2F25] text-[10px] uppercase tracking-[0.15em] text-[#8C9991] bg-[#0A100C]">
               {t.references.automotiveFooter}
@@ -58,9 +60,9 @@ export const References: React.FC = () => {
           </div>
 
           {/* Luxury Hospitality */}
-          <div className="flex flex-col bg-[#0E1914] border border-[#1A2F25] rounded overflow-hidden">
+          <div className="group flex flex-col bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-all duration-300 ease-in-out rounded overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:shadow-[#DFCA9E]/5 cursor-pointer">
             <div className="p-6 sm:p-7 flex-1">
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 transition-all duration-300 mb-0 group-hover:mb-6">
                 <div className="p-2.5 bg-[#0A100C] border border-[#1A2F25] rounded">
                   <Hotel className="w-5 h-5 text-[#DFCA9E]" />
                 </div>
@@ -68,17 +70,19 @@ export const References: React.FC = () => {
                   {t.references.hospitalityTitle}
                 </h3>
               </div>
-              <ul className="space-y-2.5">
-                {t.references.hospitalityPartners.map((hotel, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center gap-2.5 text-sm pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
-                    <span className="font-medium text-[#E0E5E2]">{hotel}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[420px] group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                <ul className="space-y-2.5">
+                  {t.references.hospitalityPartners.map((hotel, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2.5 text-sm pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
+                      <span className="font-medium text-[#E0E5E2]">{hotel}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="px-6 py-3 border-t border-[#1A2F25] text-[10px] uppercase tracking-[0.15em] text-[#8C9991] bg-[#0A100C]">
               {t.references.hospitalityFooter}
@@ -86,9 +90,9 @@ export const References: React.FC = () => {
           </div>
 
           {/* Major Events */}
-          <div className="flex flex-col bg-[#0E1914] border border-[#1A2F25] rounded overflow-hidden">
+          <div className="group flex flex-col bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-all duration-300 ease-in-out rounded overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:shadow-[#DFCA9E]/5 cursor-pointer">
             <div className="p-6 sm:p-7 flex-1">
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 transition-all duration-300 mb-0 group-hover:mb-6">
                 <div className="p-2.5 bg-[#0A100C] border border-[#1A2F25] rounded">
                   <Calendar className="w-5 h-5 text-[#DFCA9E]" />
                 </div>
@@ -96,17 +100,19 @@ export const References: React.FC = () => {
                   {t.references.eventsTitle}
                 </h3>
               </div>
-              <ul className="space-y-2.5">
-                {t.references.majorEvents.map((event, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center gap-2.5 text-sm pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
-                    <span className="font-medium text-[#E0E5E2]">{event}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[420px] group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                <ul className="space-y-2.5">
+                  {t.references.majorEvents.map((event, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2.5 text-sm pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
+                      <span className="font-medium text-[#E0E5E2]">{event}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="px-6 py-3 border-t border-[#1A2F25] text-[10px] uppercase tracking-[0.15em] text-[#8C9991] bg-[#0A100C]">
               {t.references.eventsFooter}

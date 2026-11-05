@@ -32,11 +32,6 @@ export const GlobalReach: React.FC = () => {
             <p className="text-sm text-[#8C9991] font-light leading-relaxed mb-8">
               {t.globalReach.subDescription}
             </p>
-
-            <div className="inline-flex items-center gap-2.5 px-4 py-2.5 bg-[#0E1914] border border-[#1A2F25] rounded text-xs text-[#B8C2BC] font-medium">
-              <Compass className="w-4 h-4 text-[#DFCA9E] shrink-0" />
-              <span>{t.globalReach.headquartersLabel}</span>
-            </div>
           </div>
 
           {/* Right: Region Cards */}

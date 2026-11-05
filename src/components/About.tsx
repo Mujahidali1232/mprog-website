@@ -58,14 +58,6 @@ export const About: React.FC = () => {
                   className="object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080D0A]/90 via-[#080D0A]/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#DFCA9E] font-semibold block mb-1">
-                    {t.about.imageCaption}
-                  </span>
-                  <h3 className="text-base font-bold text-white leading-snug">
-                    {t.about.imageSubCaption}
-                  </h3>
-                </div>
               </div>
             </div>
           </div>

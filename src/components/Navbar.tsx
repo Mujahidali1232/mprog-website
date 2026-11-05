@@ -105,20 +105,20 @@ export const Navbar: React.FC = () => {
             {/* Logo & Brand Identity */}
             <Link
               href="#"
-              className="flex items-center gap-3 group focus:outline-none"
+              className="flex items-center gap-3.5 group focus:outline-none shrink-0"
               aria-label="Mobile Product Genius – Home"
             >
-              <div className="relative w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden border border-[#DFCA9E]/50 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
+              <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden border border-[#DFCA9E]/50 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
                 <Image
                   src="/assets/images/mprog-logo.png"
                   alt="Mobile Product Genius Logo"
                   fill
-                  sizes="56px"
-                  className="object-contain p-[1px] rounded-full"
+                  sizes="64px"
+                  className="object-contain object-center p-[1px] rounded-full"
                   priority
                 />
               </div>
-              <div className="flex flex-col leading-none">
+              <div className="flex flex-col justify-center leading-none">
                 <span className="font-sans text-sm sm:text-[15px] tracking-[0.14em] text-white group-hover:text-[#DFCA9E] transition-colors duration-200 font-semibold uppercase">
                   Mobile Product Genius
                 </span>
@@ -293,7 +293,7 @@ export const Navbar: React.FC = () => {
               {/* Main CTA: REQUEST A PROJECT */}
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-4 xl:px-5 py-2.5 rounded-sm text-[11px] font-semibold uppercase tracking-[0.12em] xl:tracking-[0.14em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
+                className="inline-flex items-center justify-center px-2.5 py-1 rounded-sm text-[11px] font-semibold uppercase tracking-[0.12em] xl:tracking-[0.14em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
               >
                 {navData.cta}
               </a>

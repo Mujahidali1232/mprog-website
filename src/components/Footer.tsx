@@ -24,21 +24,21 @@ export const Footer: React.FC = () => {
 
             {/* Brand Column */}
             <div className="lg:col-span-4">
-              <Link href="#" className="flex items-center gap-3 mb-5 group">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden border border-[#DFCA9E]/45 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
+              <Link href="#" className="flex items-center gap-3.5 mb-5 group shrink-0">
+                <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden border border-[#DFCA9E]/50 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
                   <Image
                     src="/assets/images/mprog-logo.png"
                     alt="Mobile Product Genius Logo"
                     fill
-                    sizes="56px"
-                    className="object-contain p-[1px] rounded-full"
+                    sizes="64px"
+                    className="object-contain object-center p-[1px] rounded-full"
                   />
                 </div>
-                <div>
-                  <span className="font-sans text-sm font-bold text-white tracking-[0.1em] uppercase block group-hover:text-[#DFCA9E] transition-colors">
+                <div className="flex flex-col justify-center leading-none">
+                  <span className="font-sans text-sm sm:text-[15px] tracking-[0.14em] text-white group-hover:text-[#DFCA9E] transition-colors duration-200 font-semibold uppercase">
                     Mobile Product Genius
                   </span>
-                  <span className="text-[9px] uppercase tracking-[0.18em] text-[#DFCA9E]/75 font-normal">
+                  <span className="text-[9px] tracking-[0.18em] text-[#DFCA9E]/80 uppercase font-normal mt-0.5">
                     Driven by Innovation. Defined by Experience.
                   </span>
                 </div>

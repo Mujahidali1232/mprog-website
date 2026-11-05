@@ -26,7 +26,7 @@ export const deContent: SiteContent = {
     stats: [
       { value: '15+', label: 'Jahre Expertise', sublabel: 'Automobilindustrie weltweit' },
       { value: '25+', label: 'Länder weltweit', sublabel: 'Europa, Nahost, Nordafrika' },
-      { value: '35+', label: 'AUTOMOTIVE & HOTELS', sublabel: 'Brands' },
+      { value: '35+', label: 'AUTOMOTIVE & HOSPITALITY', sublabel: 'Brands' },
     ],
   },
   about: {
@@ -43,7 +43,7 @@ export const deContent: SiteContent = {
     highlight:
       'Bei der Mobile Product Genius UG treibt Innovation alles an – und außergewöhnliche Erlebnisse definieren das Ergebnis.',
     philosophyTitle: 'Unsere Philosophie & Arbeitsweise',
-    philosophySubtitle: 'Unsere Arbeit basiert auf klaren Prinzipien:',
+    philosophySubtitle: 'Unsere Arbeit basiert auf klaren Prinzipien',
     philosophy: [
       {
         title: 'Innovationsgetrieben',
@@ -271,11 +271,11 @@ export const deContent: SiteContent = {
       },
       {
         name: 'Naher Osten',
-        description: 'Internationale VIP-Events und Repräsentanz.',
+        description: 'Hersteller-, Importeur- und Handelsnetzwerke.',
       },
       {
         name: 'Nordafrika',
-        description: 'Netzwerkunterstützung und Trainingsprogramme.',
+        description: 'Hersteller-, Importeur- und Handelsnetzwerke.',
       },
     ],
   },
@@ -289,7 +289,7 @@ export const deContent: SiteContent = {
       'Luxury Customer Experience Specialist',
       'Automotive Retail & EV Expertise',
       'Leadership & Coaching Zertifizierungen',
-      'Herstellerzertifizierte Trainingserfahrung (BMW Group)',
+      'Herstellerzertifizierte Trainingserfahrung',
     ],
     qualificationLabel: 'OEM-Qualifikation',
   },
@@ -400,6 +400,22 @@ export const deContent: SiteContent = {
         type: 'image',
         src: '/assets/images/Training 6.JPG',
         description: 'On-the-job Coaching und Performance-Steuerung.',
+      },
+      {
+        id: 'img-training-coaching',
+        title: 'Fahrzeug- & Showroom-Coaching',
+        category: 'training',
+        type: 'image',
+        src: '/assets/images/training-coaching-car.jpg',
+        description: 'Praxisnahes Coaching direkt am Fahrzeug und im Showroom.',
+      },
+      {
+        id: 'img-training-classroom',
+        title: 'Produkt-Launch & Präsenztraining',
+        category: 'training',
+        type: 'image',
+        src: '/assets/images/training-classroom.jpg',
+        description: 'Interaktive Trainingsmethodik im Schulungsraum.',
       },
 
       // Events Videos (Placed at top)
