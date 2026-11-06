@@ -552,22 +552,6 @@ export const Navbar: React.FC = () => {
               <button
                 type="button"
                 onClick={() => {
-                  setLanguage('de');
-                  closeMobileMenu();
-                }}
-                className={`flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-sm transition-all duration-200 ${
-                  language === 'de'
-                    ? 'bg-[#DFCA9E] text-[#080D0A] shadow-sm'
-                    : 'text-[#8C9991] hover:text-white'
-                }`}
-                aria-pressed={language === 'de'}
-                aria-label="Auf Deutsch umschalten"
-              >
-                DE
-              </button>
-              <button
-                type="button"
-                onClick={() => {
                   setLanguage('en');
                   closeMobileMenu();
                 }}
@@ -580,6 +564,22 @@ export const Navbar: React.FC = () => {
                 aria-label="Switch to English"
               >
                 EN
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setLanguage('de');
+                  closeMobileMenu();
+                }}
+                className={`flex-1 py-2.5 text-xs font-bold uppercase tracking-wider rounded-sm transition-all duration-200 ${
+                  language === 'de'
+                    ? 'bg-[#DFCA9E] text-[#080D0A] shadow-sm'
+                    : 'text-[#8C9991] hover:text-white'
+                }`}
+                aria-pressed={language === 'de'}
+                aria-label="Auf Deutsch umschalten"
+              >
+                DE
               </button>
             </div>
           </div>

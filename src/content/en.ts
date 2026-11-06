@@ -234,9 +234,9 @@ export const enContent: SiteContent = {
     },
   ],
   process: {
-    eyebrow: 'How We Work (Process Overview)',
+    eyebrow: 'Structured & Goal-Oriented',
     title: 'How We Work',
-    subtitle: '',
+    subtitle: 'Four proven steps for sustainable excellence and predictable results:',
     steps: [
       {
         step: '01',
@@ -633,7 +633,7 @@ export const enContent: SiteContent = {
     description:
       'Whether you want to enhance your sales team, improve your customer experience, or optimise your retail strategy: Mobile Product Genius UG is your partner for long-term success.',
     companyName: 'Mobile Product Genius UG',
-    addressLine1: 'Ruth-Drexel-Strasse 17',
+    addressLine1: 'Ruth-Drexel-Straße 17',
     addressLine2: '81927 München',
     addressCity: 'Germany',
     email: 'info@mprog.eu',
@@ -693,7 +693,7 @@ export const enContent: SiteContent = {
       managementHeading: 'Authorised Managing Director:',
       contentResponsibleHeading: 'Responsible for content pursuant to § 55 Para. 2 RStV:',
       managementName: 'Mobile Product Genius UG',
-      contentResponsible: 'Mobile Product Genius UG, Ruth-Drexel-Strasse 17, 81927 München',
+      contentResponsible: 'Mobile Product Genius UG, Ruth-Drexel-Straße 17, 81927 München',
     },
   },
 };

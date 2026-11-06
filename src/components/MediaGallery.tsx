@@ -6,7 +6,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { Play, Eye, X, Film, Camera } from 'lucide-react';
 
 export const MediaGallery: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [activeFilter, setActiveFilter] = useState<'all' | 'training' | 'events'>('all');
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -70,7 +70,7 @@ export const MediaGallery: React.FC = () => {
                 {t.media.categoryLabels.training}
               </h3>
               <span className="text-xs text-[#8C9991] uppercase tracking-[0.15em] ml-auto">
-                {trainingItems.length} Items
+                {trainingItems.length} {language === 'de' ? 'Einträge' : 'Items'}
               </span>
             </div>
 
@@ -124,7 +124,7 @@ export const MediaGallery: React.FC = () => {
                 {t.media.categoryLabels.events}
               </h3>
               <span className="text-xs text-[#8C9991] uppercase tracking-[0.15em] ml-auto">
-                {eventsItems.length} Items
+                {eventsItems.length} {language === 'de' ? 'Einträge' : 'Items'}
               </span>
             </div>
 

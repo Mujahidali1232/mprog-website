@@ -60,7 +60,7 @@ export const Contact: React.FC = () => {
                     {t.contact.companyName}
                   </div>
                   <div className="text-xs text-[#8C9991] leading-relaxed">
-                    Ruth-Drexel-Strasse 17 81927
+                    {t.contact.addressLine1} 81927
                     <br />
                     München {t.contact.addressCity}
                   </div>

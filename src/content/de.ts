@@ -20,13 +20,13 @@ export const deContent: SiteContent = {
     title: 'Mobile Product Genius',
     subtitle: 'Driven by Innovation. Defined by Experience.',
     description:
-      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche: wirkungsvolle Produkt und Verkaufstrainings, strategische Beratung sowie exklusive Eventumsetzung für führende globale Marken.',
+      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche: wirkungsvolle Produkt- und Verkaufstrainings, strategische Beratung sowie exklusive Eventumsetzung für führende globale Marken.',
     ctaPrimary: 'Leistungen entdecken',
     ctaSecondary: 'Kontakt aufnehmen',
     stats: [
       { value: '15+', label: 'Jahre Expertise', sublabel: 'Automobilindustrie weltweit' },
       { value: '25+', label: 'Länder weltweit', sublabel: 'Europa, Nahost, Nordafrika' },
-      { value: '35+', label: 'AUTOMOTIVE & HOSPITALITY', sublabel: 'Brands' },
+      { value: '35+', label: 'AUTOMOBIL & HOSPITALITY', sublabel: 'Marken' },
     ],
   },
   about: {
@@ -35,7 +35,7 @@ export const deContent: SiteContent = {
     subtitle: 'Exzellenz & Leidenschaft',
     paragraphs: [
       'Bei der Mobile Product Genius UG sind wir von Innovation getrieben und durch Erfahrung definiert.',
-      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche sind wir spezialisiert auf die Durchführung von wirkungsvollen Produkt und Verkaufstrainings, strategischer Beratung sowie exklusiver Eventumsetzung für führende globale Marken.',
+      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche sind wir spezialisiert auf die Durchführung von wirkungsvollen Produkt- und Verkaufstrainings, strategischer Beratung sowie exklusiver Eventumsetzung für führende globale Marken.',
       'Unsere Kernkompetenz liegt darin, Wissen in messbare Performance zu transformieren. Durch innovative Trainingsmethoden, praxisnahes Coaching und ein tiefes Verständnis für Kundenverhalten befähigen wir Verkaufs- und Produktteams sowie das Management, auf höchstem Niveau zu performen.',
       'Über das Training hinaus erwecken wir Marken zum Leben. Von internationalen Automobilmessen bis hin zu exklusiven VIP-Erlebnissen schaffen wir bedeutungsvolle Interaktionen, die Kunden emotional mit der Marke verbinden und jeden Touchpoint nachhaltig prägen.',
       'Wir arbeiten in ganz Europa, dem Nahen Osten und Nordafrika und verbinden globale Standards mit kulturellem Verständnis, um konsistente und hochwertige Ergebnisse zu liefern.',
@@ -47,23 +47,28 @@ export const deContent: SiteContent = {
     philosophy: [
       {
         title: 'Innovationsgetrieben',
-        description: 'Kontinuierliche Weiterentwicklung unserer Methoden.',
+        description:
+          'Wir entwickeln unsere Methoden kontinuierlich weiter, um Marktentwicklungen und Kundenerwartungen gerecht zu werden.',
       },
       {
         title: 'Kundenfokus',
-        description: 'Jeder Schritt schafft Mehrwert für den Kunden.',
+        description:
+          'Jede Maßnahme ist darauf ausgerichtet, echten Mehrwert für den Kunden zu schaffen.',
       },
       {
         title: 'Performance-orientiert',
-        description: 'Messbare Ergebnisse in Vertrieb und Verhalten.',
+        description:
+          'Wir erzielen messbare Verbesserungen in Vertrieb, Verhalten und Kundenerlebnis.',
       },
       {
         title: 'Luxury Mindset',
-        description: 'Premium-Standards in Kommunikation und Umsetzung.',
+        description:
+          'Wir setzen höchste Luxus-Standards in Kommunikation, Auftreten und Umsetzung um.',
       },
       {
         title: 'Menschliche Verbindung',
-        description: 'Vertrauen und langfristige Beziehungen.',
+        description:
+          'Wir schaffen Vertrauen, Begeisterung und langfristige Kundenbeziehungen.',
       },
     ],
     strengthsTitle: 'Unsere Stärken',
@@ -304,9 +309,9 @@ export const deContent: SiteContent = {
       'BMW Group Middle East',
       'BMW North Africa',
       'Mercedes-Benz Deutschland',
-      'BYD Europe',
       'Rolls-Royce Iraq',
       'Mazda Iraq',
+      'BYD Europe',
     ],
     automotiveFooter: 'OEM & Handelsnetzwerke',
     hospitalityTitle: 'Luxus-Hospitality',
@@ -609,7 +614,7 @@ export const deContent: SiteContent = {
         category: 'events',
         type: 'image',
         src: '/assets/images/VIP 2.JPG',
-        description: 'Hochwertiges Gästemanagement und Protocol.',
+        description: 'Hochwertiges Gästemanagement und Protokoll.',
       },
       {
         id: 'img-vip-main',
@@ -628,7 +633,7 @@ export const deContent: SiteContent = {
     description:
       'Ob Sie Ihr Vertriebsteam stärken, Ihr Kundenerlebnis verbessern oder Ihre Retail-Strategie optimieren möchten: Mobile Product Genius UG ist Ihr Partner für nachhaltigen Erfolg.',
     companyName: 'Mobile Product Genius UG',
-    addressLine1: 'Ruth-Drexel-Strasse 17',
+    addressLine1: 'Ruth-Drexel-Straße 17',
     addressLine2: '81927 München',
     addressCity: 'Deutschland',
     email: 'info@mprog.eu',
@@ -676,7 +681,7 @@ export const deContent: SiteContent = {
       { label: 'Events & Moderation', href: '#events-vip' },
       { label: 'VIP Handling & Hospitality', href: '#events-vip' },
     ],
-    contactTitle: 'Kontakt Information',
+    contactTitle: 'Kontaktinformationen',
     allRightsReserved: 'Alle Rechte vorbehalten.',
     privacy: 'Datenschutz',
     imprint: 'Impressum',
@@ -688,7 +693,7 @@ export const deContent: SiteContent = {
       managementHeading: 'Vertretungsberechtigte Geschäftsführung:',
       contentResponsibleHeading: 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:',
       managementName: 'Mobile Product Genius UG',
-      contentResponsible: 'Mobile Product Genius UG, Ruth-Drexel-Strasse 17, 81927 München',
+      contentResponsible: 'Mobile Product Genius UG, Ruth-Drexel-Straße 17, 81927 München',
     },
   },
 };

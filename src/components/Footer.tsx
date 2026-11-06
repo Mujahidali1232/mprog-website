@@ -132,25 +132,12 @@ export const Footer: React.FC = () => {
                 {t.footer.imprint}
               </button>
 
-              {/* Language Switcher: DE | EN */}
+              {/* Language Switcher: EN | DE */}
               <div
                 className="flex items-center rounded border border-[#1A2F25] bg-[#0E1914] p-0.5"
                 role="group"
                 aria-label="Language selection"
               >
-                <button
-                  type="button"
-                  onClick={() => setLanguage('de')}
-                  className={`px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-sm transition-all duration-200 ${
-                    language === 'de'
-                      ? 'bg-[#DFCA9E] text-[#080D0A]'
-                      : 'text-[#8C9991] hover:text-white'
-                  }`}
-                  aria-pressed={language === 'de'}
-                  aria-label="Auf Deutsch umschalten"
-                >
-                  DE
-                </button>
                 <button
                   type="button"
                   onClick={() => setLanguage('en')}
@@ -163,6 +150,19 @@ export const Footer: React.FC = () => {
                   aria-label="Switch to English"
                 >
                   EN
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLanguage('de')}
+                  className={`px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-sm transition-all duration-200 ${
+                    language === 'de'
+                      ? 'bg-[#DFCA9E] text-[#080D0A]'
+                      : 'text-[#8C9991] hover:text-white'
+                  }`}
+                  aria-pressed={language === 'de'}
+                  aria-label="Auf Deutsch umschalten"
+                >
+                  DE
                 </button>
               </div>
 
