@@ -11,7 +11,7 @@ const philosophyColors = [
 ];
 
 export const About: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { images } = useImages();
 
   return (
@@ -52,7 +52,7 @@ export const About: React.FC = () => {
               <div className="relative aspect-[4/5] w-full">
                 <Image
                   src={images.about || "/assets/images/Modaration.JPG"}
-                  alt="Mobile Product Genius Keynote Stage Experience"
+                  alt={language === 'de' ? 'Mobile Product Genius Keynote-Bühnenerlebnis' : 'Mobile Product Genius Keynote Stage Experience'}
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-105"

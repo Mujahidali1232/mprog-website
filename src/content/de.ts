@@ -18,9 +18,9 @@ export const deContent: SiteContent = {
   hero: {
     eyebrow: 'Mobile Product Genius UG',
     title: 'Mobile Product Genius',
-    subtitle: 'Driven by Innovation. Defined by Experience.',
+    subtitle: 'Von Innovation getrieben. Durch Erfahrung definiert.',
     description:
-      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche: wirkungsvolle Produkt- und Verkaufstrainings, strategische Beratung sowie exklusive Eventumsetzung für führende globale Marken.',
+      'Mit über 15 Jahren internationaler Expertise in der Automobilbranche sind wir spezialisiert auf die Durchführung von wirkungsvollen Produkt- und Verkaufstrainings, strategischer Beratung sowie exklusiver Eventumsetzung für führende globale Marken.',
     ctaPrimary: 'Leistungen entdecken',
     ctaSecondary: 'Kontakt aufnehmen',
     stats: [
@@ -32,7 +32,7 @@ export const deContent: SiteContent = {
   about: {
     eyebrow: '',
     title: 'Über Uns',
-    subtitle: 'Exzellenz & Leidenschaft',
+    subtitle: 'Exzellenz & Erfahrung',
     paragraphs: [
       'Bei der Mobile Product Genius UG sind wir von Innovation getrieben und durch Erfahrung definiert.',
       'Mit über 15 Jahren internationaler Expertise in der Automobilbranche sind wir spezialisiert auf die Durchführung von wirkungsvollen Produkt- und Verkaufstrainings, strategischer Beratung sowie exklusiver Eventumsetzung für führende globale Marken.',
@@ -61,7 +61,7 @@ export const deContent: SiteContent = {
           'Wir erzielen messbare Verbesserungen in Vertrieb, Verhalten und Kundenerlebnis.',
       },
       {
-        title: 'Luxury Mindset',
+        title: 'Luxus-Mindset',
         description:
           'Wir setzen höchste Luxus-Standards in Kommunikation, Auftreten und Umsetzung um.',
       },
@@ -73,12 +73,12 @@ export const deContent: SiteContent = {
     ],
     strengthsTitle: 'Unsere Stärken',
     strengths: [
-      'Über 15 Jahre internationale Automotive-Erfahrung',
-      'Bewährte Expertise in Training, Beratung & Event-Execution',
-      'Tiefes Verständnis für Premium- und Luxus-Kunden',
-      'Starke Zusammenarbeit mit globalen Automobilmarken',
+      'Über 15 Jahre internationale Automobilerfahrung',
+      'Bewährte Expertise in Training, Beratung & Eventumsetzung',
+      'Tiefes Verständnis für die Erwartungen von Luxuskunden',
+      'Starke Erfolgsbilanz mit globalen Automobilmarken',
       'Praxisorientierter & ergebnisfokussierter Ansatz',
-      'Hohe Professionalität im VIP-Umfeld',
+      'Höchste Professionalität im VIP-Umfeld',
     ],
     imageCaption: 'Internationale Automobilmessen & Keynotes',
     imageSubCaption: 'Jeden Touchpoint in einen nachhaltigen Eindruck verwandeln',
@@ -97,7 +97,7 @@ export const deContent: SiteContent = {
       title: 'Training & Coaching',
       tagline: 'Wissen in messbare Leistung transformieren',
       intro:
-        'Getrieben von Innovation sind unsere Trainings- und Coachingprogramme darauf ausgelegt, Wissen in messbare Leistung umzuwandeln. Wir kombinieren moderne Trainingsmethoden, praxisnahes Coaching und tiefes Produktwissen, um Verkaufsberater, Produktexperten und Führungskräfte auf höchstem Niveau zu entwickeln. Von Produktschulungen über Customer Experience bis hin zu Luxury Mindset – unser Ansatz sorgt für konsistente, souveräne und wirkungsvolle Kundeninteraktionen.',
+        'Getrieben von Innovation sind unsere Trainings- und Coachingprogramme darauf ausgelegt, Wissen in messbare Leistung umzuwandeln. Wir kombinieren moderne Trainingsmethoden, praxisnahes Coaching und tiefes Produktwissen, um Verkaufsberater, Produktexperten und Führungskräfte auf höchstem Niveau zu entwickeln. Von Produktschulungen über Customer Experience bis hin zum Luxus-Mindset – unser Ansatz sorgt für konsistente, souveräne und wirkungsvolle Kundeninteraktionen.',
       outcome: 'Das Ergebnis: gesteigerte Performance und ein Premium-Kundenerlebnis auf höchstem Markenstandard.',
       image: '/assets/images/Product Training 1.JPG',
       categories: [
@@ -115,14 +115,14 @@ export const deContent: SiteContent = {
           title: 'Verkaufstraining',
           items: [
             'Exzellenz im Verkaufsprozess',
-            'Lead-Handling & Qualifizierung',
-            'Luxury Mindset Training',
-            'Testdrive-Exzellenz',
+            'Lead-Management & Qualifizierung',
+            'Luxus-Mindset-Training',
+            'Probefahrt-Exzellenz',
             'Einwandbehandlung & Abschlussstärke',
           ],
         },
         {
-          title: 'Customer Experience Training',
+          title: 'Kundenerlebnis-Training',
           items: [
             'Premium-Service-Verhalten',
             'Optimierung der Customer Journey',
@@ -133,7 +133,7 @@ export const deContent: SiteContent = {
         {
           title: 'Coaching (Teams & Management)',
           items: [
-            'On-the-Job Coaching im Showroom',
+            'Praxiscoaching direkt im Showroom',
             'Management- & Führungskräfteentwicklung',
             'Performance-Steuerung',
             'Kommunikations- und Verhaltenscoaching',
@@ -152,12 +152,12 @@ export const deContent: SiteContent = {
       image: '/assets/images/Product Training 2.JPG',
       categories: [
         {
-          title: 'Sales & Business Performance',
+          title: 'Vertriebs- & Geschäftsperformance',
           items: [
-            'Optimierung des Sales Funnels',
+            'Optimierung des Verkaufstrichters',
             'Strukturierung des Lead-Managements',
-            'Testdrive-Strategie & Umsetzung',
-            'KPI-Steuerung & Performance-Analyse',
+            'Probefahrt-Strategie & Umsetzung',
+            'KPI-Steuerung & Leistungsanalyse',
           ],
         },
         {
@@ -165,19 +165,19 @@ export const deContent: SiteContent = {
           items: [
             'Verbesserung der Zusammenarbeit',
             'Interne Kommunikationsberatung',
-            'Coaching für Premium-Standards',
+            'Coaching für konsistente Premium-Standards',
           ],
         },
         {
-          title: 'Customer Journey Excellence',
+          title: 'Kundenreise-Exzellenz',
           items: [
-            'Touchpoint-Mapping',
-            'Experience Design',
-            'Prozessoptimierung für Sales & After-Sales',
+            'Touchpoint-Analyse',
+            'Erlebnisgestaltung',
+            'Prozessoptimierung für Vertrieb & After-Sales',
           ],
         },
         {
-          title: 'Onboarding & Recruitment',
+          title: 'Onboarding & Personalgewinnung',
           items: [
             'Strukturierte Onboarding-Programme',
             'Unterstützung bei der Rekrutierung von Vertriebsteams',
@@ -197,36 +197,36 @@ export const deContent: SiteContent = {
       image: '/assets/images/Event 1.jpg',
       categories: [
         {
-          title: 'Event Execution',
+          title: 'Eventumsetzung',
           items: [
             'Internationale Automobilmessen & Ausstellungen',
-            'Fahrzeug- & Innovationslaunches',
-            'Driving Events & Roadshows',
+            'Fahrzeug- & Innovationspräsentationen',
+            'Fahrevents & Roadshows',
             'Händler- & Kundenaktivierungen',
           ],
         },
         {
           title: 'Produktpräsentation & Moderation',
           items: [
-            'Live Präsentationen',
+            'Live-Präsentationen',
             'Technisches Storytelling',
             'Professionelle Markenkommunikation',
             'Produktkompetenz für Medien & VIP-Gäste',
           ],
         },
         {
-          title: 'VIP Handling',
+          title: 'VIP-Betreuung',
           items: [
-            'Premium Hospitality für VIP-Kunden',
+            'Exklusive Hospitality für VIP-Kunden',
             'Exklusive Preview-Erlebnisse',
             'Hochwertiges Gästemanagement',
           ],
         },
         {
-          title: 'Experience Design',
+          title: 'Erlebnisgestaltung',
           items: [
             'Entwicklung kreativer Konzepte',
-            'Planung von Luxury Experiences',
+            'Planung exklusiver Luxuserlebnisse',
             'Integration digitaler & physischer Touchpoints',
           ],
         },
@@ -272,15 +272,15 @@ export const deContent: SiteContent = {
     regions: [
       {
         name: 'Europa',
-        description: 'Hersteller-, Importeur- und Handelsnetzwerke.',
+        description: 'Unterstützung für Hersteller, Importeure und Handelsnetzwerke.',
       },
       {
         name: 'Naher Osten',
-        description: 'Hersteller-, Importeur- und Handelsnetzwerke.',
+        description: 'Unterstützung für Hersteller, Importeure und Handelsnetzwerke.',
       },
       {
         name: 'Nordafrika',
-        description: 'Hersteller-, Importeur- und Handelsnetzwerke.',
+        description: 'Unterstützung für Hersteller, Importeure und Handelsnetzwerke.',
       },
     ],
   },
@@ -289,11 +289,11 @@ export const deContent: SiteContent = {
     title: 'Zertifizierungen & Expertise',
     subtitle: 'Fundierte Qualifikationen nach höchsten Branchen- und Herstellervorgaben:',
     items: [
-      'Zertifizierter Sales Trainer',
+      'Zertifizierter Verkaufstrainer',
       'Zertifizierter Produktexperte',
-      'Luxury Customer Experience Specialist',
-      'Automotive Retail & EV Expertise',
-      'Leadership & Coaching Zertifizierungen',
+      'Spezialist für Luxus-Kundenerlebnisse',
+      'Expertise im Automobilhandel & Elektromobilität',
+      'Führungs- & Coaching-Zertifizierungen',
       'Herstellerzertifizierte Trainingserfahrung',
     ],
     qualificationLabel: 'OEM-Qualifikation',
@@ -306,12 +306,12 @@ export const deContent: SiteContent = {
     automotivePartners: [
       'BMW Group Deutschland',
       'BMW Group Schweiz',
-      'BMW Group Middle East',
-      'BMW North Africa',
+      'BMW Group Naher Osten',
+      'BMW Nordafrika',
       'Mercedes-Benz Deutschland',
-      'Rolls-Royce Iraq',
-      'Mazda Iraq',
-      'BYD Europe',
+      'Rolls-Royce Irak',
+      'Mazda Irak',
+      'BYD Europa',
     ],
     automotiveFooter: 'OEM & Handelsnetzwerke',
     hospitalityTitle: 'Luxus-Hospitality',
@@ -319,23 +319,23 @@ export const deContent: SiteContent = {
       'Mandarin Oriental München',
       'Kempinski Hotel München',
     ],
-    hospitalityFooter: 'Luxury Hospitality Standards',
+    hospitalityFooter: 'Standards der Luxus-Hotellerie',
     eventsTitle: 'Wichtige Events',
     majorEvents: [
       'Concorso d\'Eleganza Villa d\'Este',
       'IAA Frankfurt & IAA München',
-      'Geneva International Motor Show',
-      'Qatar Geneva Motor Show',
-      'Dubai International Motor Show',
+      'Internationaler Automobilsalon Genf',
+      'Katar Genfer Automobilsalon',
+      'Internationale Automobilmesse Dubai',
     ],
     eventsFooter: 'Internationale Ausstellungen',
     vipTitle: 'VIP-Gäste',
     vipIntro:
       'Wir hatten das Privileg, mit hochrangigen Persönlichkeiten aus Politik, Wirtschaft, Sport und Kunst zu arbeiten, darunter:',
     vipGuests: [
-      'Seine Hoheit Sheikh Tamim bin Hamad Al Thani',
-      'Seine Hoheit Sheikh Mansoor bin Mohammed bin Rashid Al Maktoum',
-      'Seine Hoheit Sheikh Ahmad bin Mohammed bin Rashid Al Maktoum',
+      'Seine Hoheit Scheich Tamim bin Hamad Al Thani',
+      'Seine Hoheit Scheich Mansoor bin Mohammed bin Rashid Al Maktoum',
+      'Seine Hoheit Scheich Ahmad bin Mohammed bin Rashid Al Maktoum',
       'Jeff Koons',
       'Gianni Infantino',
       'Rowan Atkinson',
@@ -404,7 +404,7 @@ export const deContent: SiteContent = {
         category: 'training',
         type: 'image',
         src: '/assets/images/Training 6.JPG',
-        description: 'On-the-job Coaching und Performance-Steuerung.',
+        description: 'Praxisnahes Coaching und Performance-Steuerung.',
       },
       {
         id: 'img-training-coaching',
@@ -426,7 +426,7 @@ export const deContent: SiteContent = {
       // Events Videos (Placed at top)
       {
         id: 'vid-event-1',
-        title: 'Automotive Event Showcase I',
+        title: 'Automotive-Event-Einblicke I',
         category: 'events',
         type: 'video',
         src: '/assets/videos/Video Event 1.mp4',
@@ -435,7 +435,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'vid-event-2',
-        title: 'Automotive Event Showcase II',
+        title: 'Automotive-Event-Einblicke II',
         category: 'events',
         type: 'video',
         src: '/assets/videos/Video Event 2.MP4',
@@ -453,7 +453,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'vid-event-4',
-        title: 'VIP Event Aktivierung',
+        title: 'VIP-Event-Aktivierung',
         category: 'events',
         type: 'video',
         src: '/assets/videos/Video Event 4.mp4',
@@ -462,7 +462,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'vid-agmc',
-        title: 'AGMC Neueröffnung Event',
+        title: 'AGMC-Neueröffnungsevent',
         category: 'events',
         type: 'video',
         src: '/assets/videos/AGMC Opening day 2021.mp4',
@@ -471,7 +471,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'vid-dubai-motorshow',
-        title: 'Dubai International Motor Show',
+        title: 'Internationale Automobilmesse Dubai',
         category: 'events',
         type: 'video',
         src: '/assets/videos/Dubai Motor show.mp4',
@@ -482,7 +482,7 @@ export const deContent: SiteContent = {
       // Events Photos (Placed below videos)
       {
         id: 'img-event-1',
-        title: 'Automotive Keynote & Bühnen-Event',
+        title: 'Automotive-Keynote & Bühnen-Event',
         category: 'events',
         type: 'image',
         src: '/assets/images/Event 1.jpg',
@@ -490,7 +490,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-event-2',
-        title: 'Markenerlebnis Präsentation',
+        title: 'Markenerlebnis-Präsentation',
         category: 'events',
         type: 'image',
         src: '/assets/images/Event 2.JPG',
@@ -506,7 +506,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-event-4',
-        title: 'VIP Gästebetreuung',
+        title: 'VIP-Gästebetreuung',
         category: 'events',
         type: 'image',
         src: '/assets/images/Event 4.jpeg',
@@ -514,7 +514,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-event-5',
-        title: 'Autohaus Eröffnungsfeier',
+        title: 'Autohaus-Eröffnungsfeier',
         category: 'events',
         type: 'image',
         src: '/assets/images/Event 5.jpg',
@@ -534,7 +534,7 @@ export const deContent: SiteContent = {
         category: 'events',
         type: 'image',
         src: '/assets/images/Concorso de eleganze.jpg',
-        description: 'Exklusives Automotive-Heritage-Event.',
+        description: 'Exklusives Automobil-Traditionsevent.',
       },
       {
         id: 'img-gims',
@@ -546,7 +546,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-exhibition',
-        title: 'Messe- & Markenshowcase',
+        title: 'Messe- & Markenpräsentation',
         category: 'events',
         type: 'image',
         src: '/assets/images/Exhibition.jpg',
@@ -570,7 +570,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-modaration',
-        title: 'Live Produkt-Moderation',
+        title: 'Live-Produktmoderation',
         category: 'events',
         type: 'image',
         src: '/assets/images/Modaration.JPG',
@@ -578,15 +578,15 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-prod-pres-1',
-        title: 'Flaggschiff Produktpräsentation I',
+        title: 'Flaggschiff-Produktpräsentation I',
         category: 'events',
         type: 'image',
         src: '/assets/images/Product presentation 1.jpg',
-        description: 'Product Genius Keynote und Enthüllung.',
+        description: 'Product-Genius-Keynote und Fahrzeugenthüllung.',
       },
       {
         id: 'img-prod-pres-2',
-        title: 'Flaggschiff Produktpräsentation II',
+        title: 'Flaggschiff-Produktpräsentation II',
         category: 'events',
         type: 'image',
         src: '/assets/images/Product Presentation 2.jpg',
@@ -594,7 +594,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-prod-pres-main',
-        title: 'Live Fahrzeugeinführung',
+        title: 'Live-Fahrzeugeinführung',
         category: 'events',
         type: 'image',
         src: '/assets/images/Product presentation.JPG',
@@ -618,11 +618,11 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-vip-main',
-        title: 'Exklusive VIP Hospitality',
+        title: 'Exklusive VIP-Hospitality',
         category: 'events',
         type: 'image',
         src: '/assets/images/vip.jpg',
-        description: 'Luxury Hospitality für VIP-Gäste.',
+        description: 'Exklusive Hospitality für VIP-Gäste.',
       },
     ],
   },
@@ -675,11 +675,11 @@ export const deContent: SiteContent = {
     servicesTitle: 'Leistungen',
     serviceLinks: [
       { label: 'Produkt- & EV-Training', href: '#training-coaching' },
-      { label: 'Verkaufstraining & Luxury Mindset', href: '#training-coaching' },
+      { label: 'Verkaufstraining & Luxus-Mindset', href: '#training-coaching' },
       { label: 'Showroom- & Management-Coaching', href: '#training-coaching' },
-      { label: 'Automotive Retail Beratung', href: '#consulting' },
+      { label: 'Beratung für den Automobilhandel', href: '#consulting' },
       { label: 'Events & Moderation', href: '#events-vip' },
-      { label: 'VIP Handling & Hospitality', href: '#events-vip' },
+      { label: 'VIP-Betreuung & Hospitality', href: '#events-vip' },
     ],
     contactTitle: 'Kontaktinformationen',
     allRightsReserved: 'Alle Rechte vorbehalten.',

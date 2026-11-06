@@ -16,7 +16,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>('de');
+  const [language, setLanguageState] = useState<Language>('en');
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
@@ -29,10 +29,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
           document.documentElement.lang = stored;
         }
       } else {
-        // Default to German ('de') as primary language of MProG
-        setLanguageState('de');
+        setLanguageState('en');
         if (typeof document !== 'undefined') {
-          document.documentElement.lang = 'de';
+          document.documentElement.lang = 'en';
         }
       }
     } catch {

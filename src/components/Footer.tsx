@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
                     Mobile Product Genius
                   </span>
                   <span className="text-[9px] tracking-[0.18em] text-[#DFCA9E]/80 uppercase font-normal mt-0.5">
-                    Driven by Innovation. Defined by Experience.
+                    {t.footer.tagline}
                   </span>
                 </div>
               </Link>
@@ -136,7 +136,7 @@ export const Footer: React.FC = () => {
               <div
                 className="flex items-center rounded border border-[#1A2F25] bg-[#0E1914] p-0.5"
                 role="group"
-                aria-label="Language selection"
+                aria-label={language === 'de' ? 'Sprachauswahl' : 'Language selection'}
               >
                 <button
                   type="button"
@@ -169,7 +169,7 @@ export const Footer: React.FC = () => {
               <button
                 onClick={scrollToTop}
                 className="flex items-center gap-1.5 hover:text-[#DFCA9E] transition-colors"
-                aria-label="Scroll to top"
+                aria-label={t.footer.backToTop}
               >
                 <ArrowUp className="w-3.5 h-3.5" />
                 <span>{t.footer.backToTop}</span>
@@ -193,7 +193,7 @@ export const Footer: React.FC = () => {
             <button
               onClick={() => setImprintOpen(false)}
               className="absolute top-4 right-4 p-2 text-[#8C9991] hover:text-white transition-colors"
-              aria-label="Close"
+              aria-label={language === 'de' ? 'Schließen' : 'Close'}
             >
               <X className="w-5 h-5" />
             </button>
@@ -212,8 +212,8 @@ export const Footer: React.FC = () => {
 
               <p>
                 <strong className="text-white">{t.footer.imprintContent.contactHeading}</strong><br />
-                E-Mail: info@mprog.eu<br />
-                Internet: www.mprog.eu
+                {language === 'de' ? 'E-Mail' : 'Email'}: info@mprog.eu<br />
+                {language === 'de' ? 'Internet' : 'Website'}: www.mprog.eu
               </p>
 
               <p>

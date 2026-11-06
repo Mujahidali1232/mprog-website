@@ -7,7 +7,7 @@ import { useImages } from '@/context/ImageContext';
 import { ArrowDown } from 'lucide-react';
 
 export const Hero: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { images } = useImages();
 
   return (
@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src={images.hero || "/assets/images/Product presentation 1.jpg"}
-          alt="Mobile Product Genius – Keynote Stage with BMW 7 Series"
+          alt={language === 'de' ? 'Mobile Product Genius – Keynote-Bühne mit BMW 7er' : 'Mobile Product Genius – Keynote Stage with BMW 7 Series'}
           fill
           priority
           sizes="100vw"
@@ -79,7 +79,7 @@ export const Hero: React.FC = () => {
       <a
         href="#about"
         className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 z-20 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[#8C9991] hover:text-[#DFCA9E] transition-colors duration-200"
-        aria-label="Scroll down"
+        aria-label={language === 'de' ? 'Nach unten scrollen' : 'Scroll down'}
       >
         <ArrowDown className="w-3.5 h-3.5 animate-bounce" />
       </a>

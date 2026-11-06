@@ -3,13 +3,17 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useImages, ALL_LIBRARY_IMAGES } from '@/context/ImageContext';
-import { X, Check, RefreshCw, Image as ImageIcon, Eye } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
+import { X, Check, RefreshCw, Eye } from 'lucide-react';
 
 interface SectionDefinition {
   key: string;
   pageName: string;
+  pageNameDe: string;
   sectionName: string;
+  sectionNameDe: string;
   description: string;
+  descriptionDe: string;
   defaultSrc: string;
 }
 
@@ -17,48 +21,66 @@ const SECTIONS_LIST: SectionDefinition[] = [
   {
     key: 'hero',
     pageName: 'Home Page',
+    pageNameDe: 'Startseite',
     sectionName: 'Hero Section Main Background',
+    sectionNameDe: 'Hero-Bereich Haupthintergrund',
     description: 'Primary high-impact hero showcase photo behind title & CTA.',
+    descriptionDe: 'Primäres Hero-Hintergrundfoto hinter Titel & CTA.',
     defaultSrc: '/assets/images/hero-saidi-bmw7.jpg',
   },
   {
     key: 'about',
     pageName: 'Home / About Page',
+    pageNameDe: 'Über Uns',
     sectionName: 'About & Philosophy Card Photo',
+    sectionNameDe: 'Über Uns & Philosophie Foto',
     description: 'Stage presentation and leadership keynote photograph.',
+    descriptionDe: 'Bühnenpräsentation und Leadership-Keynote-Aufnahme.',
     defaultSrc: '/assets/images/event-keynote-stage.jpg',
   },
   {
     key: 'pillar1',
     pageName: 'Services / Training Page',
+    pageNameDe: 'Leistungen / Training',
     sectionName: 'Pillar 01: Training & Coaching Card',
+    sectionNameDe: 'Säule 01: Training & Coaching',
     description: 'In-vehicle coaching and showroom product training feature photo.',
+    descriptionDe: 'Fahrzeug-Coaching und Showroom-Produkttraining.',
     defaultSrc: '/assets/images/training-coaching-car.jpg',
   },
   {
     key: 'pillar2',
     pageName: 'Services / Consulting Page',
+    pageNameDe: 'Leistungen / Beratung',
     sectionName: 'Pillar 02: Dealership Consulting Card',
+    sectionNameDe: 'Säule 02: Beratung für Automobilhändler',
     description: 'Automotive dealership consultation & audit highlight photo.',
+    descriptionDe: 'Beratung und Prozessoptimierung im Automobilhandel.',
     defaultSrc: '/assets/images/consulting-dealership-1.jpg',
   },
   {
     key: 'pillar3',
     pageName: 'Services / Events Page',
+    pageNameDe: 'Leistungen / Events',
     sectionName: 'Pillar 03: VIP Events & Motor Shows Card',
+    sectionNameDe: 'Säule 03: Events, Markenerlebnisse & VIP Services',
     description: 'BMW i8 delegation and luxury event presentation photo.',
+    descriptionDe: 'VIP-Delegation und exklusive Event-Präsentation.',
     defaultSrc: '/assets/images/event-bmw-i8-delegation.jpg',
   },
 ];
 
 export const PictureSelectorModal: React.FC = () => {
   const { images, setImageForSection, resetToDefaults, isSelectorOpen, setIsSelectorOpen } = useImages();
+  const { language } = useLanguage();
   const [activeSection, setActiveSection] = useState<SectionDefinition | null>(null);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   if (!isSelectorOpen) {
     return null;
   }
+
+  const isDe = language === 'de';
 
   return (
     <div className="fixed inset-0 z-50 bg-black/92 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
@@ -70,11 +92,11 @@ export const PictureSelectorModal: React.FC = () => {
             <div className="flex items-center gap-2 mb-1">
               <span className="w-2 h-2 rounded-full bg-[#DFCA9E]" />
               <span className="text-[11px] uppercase tracking-[0.2em] text-[#DFCA9E] font-semibold">
-                Client Control Panel
+                {isDe ? 'Kunden-Kontrollbereich' : 'Client Control Panel'}
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-              Page & Section Picture Manager
+              {isDe ? 'Seiten- & Bereichs-Bildverwaltung' : 'Page & Section Picture Manager'}
             </h2>
           </div>
 
@@ -84,12 +106,12 @@ export const PictureSelectorModal: React.FC = () => {
               className="flex items-center gap-1.5 px-3 py-1.5 border border-[#1A2F25] hover:border-[#DFCA9E]/50 text-[#8C9991] hover:text-white text-xs uppercase tracking-[0.1em] rounded transition-colors"
             >
               <RefreshCw className="w-3.5 h-3.5" />
-              <span>Reset Defaults</span>
+              <span>{isDe ? 'Standard wiederherstellen' : 'Reset Defaults'}</span>
             </button>
             <button
               onClick={() => setIsSelectorOpen(false)}
               className="p-2 text-[#8C9991] hover:text-white bg-[#0E1914] hover:bg-[#1A2F25] border border-[#1A2F25] rounded transition-colors"
-              aria-label="Close"
+              aria-label={isDe ? 'Schließen' : 'Close'}
             >
               <X className="w-5 h-5" />
             </button>
@@ -99,7 +121,17 @@ export const PictureSelectorModal: React.FC = () => {
         {/* Content Body */}
         <div className="p-6 overflow-y-auto flex-1 space-y-6">
           <p className="text-sm text-[#8C9991] font-light leading-relaxed">
-            Review the pictures assigned to every page and section of the website below. Click <strong className="text-white">Change Picture</strong> on any section to pick a new high-resolution photo from the master image gallery.
+            {isDe ? (
+              <>
+                Überprüfen Sie unten die den einzelnen Bereichen der Website zugewiesenen Bilder. Klicken Sie auf{' '}
+                <strong className="text-white">Bild auswählen</strong>, um ein neues hochauflösendes Foto aus der Galerie zuzuweisen.
+              </>
+            ) : (
+              <>
+                Review the pictures assigned to every page and section of the website below. Click{' '}
+                <strong className="text-white">Change Picture</strong> on any section to pick a new high-resolution photo from the master image gallery.
+              </>
+            )}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -115,7 +147,7 @@ export const PictureSelectorModal: React.FC = () => {
                   <div>
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-[10px] uppercase tracking-[0.16em] text-[#DFCA9E] font-semibold px-2 py-0.5 bg-[#080D0A] border border-[#1A2F25] rounded-sm">
-                        {sec.pageName}
+                        {isDe ? sec.pageNameDe : sec.pageName}
                       </span>
                       <span className="text-[10px] text-[#8C9991] uppercase tracking-wider">
                         {currentImgData ? currentImgData.resolution.split(' ')[0] : 'High-Res'}
@@ -123,17 +155,17 @@ export const PictureSelectorModal: React.FC = () => {
                     </div>
 
                     <h3 className="text-base font-bold text-white mb-1 leading-snug">
-                      {sec.sectionName}
+                      {isDe ? sec.sectionNameDe : sec.sectionName}
                     </h3>
                     <p className="text-xs text-[#7A8780] font-light mb-4 leading-relaxed">
-                      {sec.description}
+                      {isDe ? sec.descriptionDe : sec.description}
                     </p>
 
                     {/* Preview Box */}
                     <div className="relative aspect-[16/10] w-full rounded bg-black overflow-hidden border border-[#1A2F25] mb-4 group">
                       <Image
                         src={currentSrc}
-                        alt={sec.sectionName}
+                        alt={isDe ? sec.sectionNameDe : sec.sectionName}
                         fill
                         sizes="400px"
                         className="object-cover"
@@ -143,21 +175,21 @@ export const PictureSelectorModal: React.FC = () => {
                         className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-xs text-white font-medium uppercase tracking-wider"
                       >
                         <Eye className="w-4 h-4 text-[#DFCA9E]" />
-                        <span>Preview Full Screen</span>
+                        <span>{isDe ? 'Vollbildvorschau' : 'Preview Full Screen'}</span>
                       </button>
                     </div>
                   </div>
 
                   <div className="pt-2 border-t border-[#1A2F25] flex items-center justify-between">
                     <span className="text-[11px] text-[#DFCA9E] truncate max-w-[170px]" title={currentImgData?.title}>
-                      {currentImgData?.title || 'Selected Picture'}
+                      {currentImgData?.title || (isDe ? 'Ausgewähltes Bild' : 'Selected Picture')}
                     </span>
 
                     <button
                       onClick={() => setActiveSection(sec)}
                       className="px-3 py-1.5 bg-[#DFCA9E] text-[#080D0A] hover:bg-[#EFE1C6] text-xs font-semibold uppercase tracking-[0.1em] rounded-sm transition-colors"
                     >
-                      Select Picture
+                      {isDe ? 'Bild auswählen' : 'Select Picture'}
                     </button>
                   </div>
                 </div>
@@ -168,12 +200,16 @@ export const PictureSelectorModal: React.FC = () => {
 
         {/* Footer info */}
         <div className="px-6 py-4 border-t border-[#1A2F25] bg-[#0C140F] flex items-center justify-between text-xs text-[#8C9991]">
-          <span>14 Master High-Resolution Photos Available (up to 9504x6336 resolution)</span>
+          <span>
+            {isDe
+              ? '14 hochauflösende Master-Fotos verfügbar (bis zu 9504×6336 Auflösung)'
+              : '14 Master High-Resolution Photos Available (up to 9504x6336 resolution)'}
+          </span>
           <button
             onClick={() => setIsSelectorOpen(false)}
             className="px-5 py-2 bg-[#1A2F25] hover:bg-[#245E44] text-white text-xs uppercase tracking-[0.12em] font-semibold rounded transition-colors"
           >
-            Done Reviewing
+            {isDe ? 'Fertig' : 'Done Reviewing'}
           </button>
         </div>
       </div>
@@ -191,15 +227,16 @@ export const PictureSelectorModal: React.FC = () => {
             <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#1A2F25]">
               <div>
                 <span className="text-[10px] uppercase tracking-[0.18em] text-[#DFCA9E] font-semibold">
-                  Selecting picture for:
+                  {isDe ? 'Bildauswahl für:' : 'Selecting picture for:'}
                 </span>
                 <h3 className="text-xl font-bold text-white mt-0.5">
-                  {activeSection.sectionName}
+                  {isDe ? activeSection.sectionNameDe : activeSection.sectionName}
                 </h3>
               </div>
               <button
                 onClick={() => setActiveSection(null)}
                 className="p-1.5 text-[#8C9991] hover:text-white bg-[#0E1914] border border-[#1A2F25] rounded"
+                aria-label={isDe ? 'Schließen' : 'Close'}
               >
                 <X className="w-5 h-5" />
               </button>

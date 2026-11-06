@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
             <Link
               href="#"
               className="flex items-center gap-3.5 group focus:outline-none shrink-0"
-              aria-label="Mobile Product Genius – Home"
+              aria-label={language === 'de' ? 'Mobile Product Genius – Startseite' : 'Mobile Product Genius – Home'}
             >
               <div className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden border border-[#DFCA9E]/50 group-hover:border-[#DFCA9E] transition-all duration-200 shrink-0 bg-white flex items-center justify-center shadow-md shadow-black/40">
                 <Image
@@ -129,13 +129,16 @@ export const Navbar: React.FC = () => {
             </Link>
 
             {/* Desktop Refined Navigation Links: ABOUT, SERVICES, EXPERTISE, INSIGHTS, CONTACT */}
-            <nav className="hidden lg:flex items-center gap-4 xl:gap-8 shrink-0">
+            <nav className="hidden lg:flex items-center gap-3 xl:gap-6 shrink-0">
               {/* ABOUT */}
               <a
                 href={navData.about.href}
-                className="text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2"
+                className="inline-grid place-items-center text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap"
               >
-                {navData.about.label}
+                <span className="col-start-1 row-start-1">{navData.about.label}</span>
+                <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
+                  ÜBER UNS
+                </span>
               </a>
 
               {/* SERVICES (Dropdown: Training & Coaching, Advice, Events & VIP) */}
@@ -146,7 +149,7 @@ export const Navbar: React.FC = () => {
               >
                 <a
                   href={navData.services.href}
-                  className={`flex items-center gap-1.5 text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 ${
+                  className={`inline-grid place-items-center text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap ${
                     openDropdown === 'services' ? 'text-white' : 'text-[#A0A0AB] hover:text-white'
                   }`}
                   onClick={(e) => {
@@ -157,12 +160,21 @@ export const Navbar: React.FC = () => {
                   aria-expanded={openDropdown === 'services'}
                   aria-haspopup="true"
                 >
-                  <span>{navData.services.label}</span>
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 text-[#DFCA9E]/80 transition-transform duration-200 ${
-                      openDropdown === 'services' ? 'rotate-180 text-[#DFCA9E]' : ''
-                    }`}
-                  />
+                  <span className="col-start-1 row-start-1 inline-flex items-center gap-1.5">
+                    <span>{navData.services.label}</span>
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 text-[#DFCA9E]/80 transition-transform duration-200 ${
+                        openDropdown === 'services' ? 'rotate-180 text-[#DFCA9E]' : ''
+                      }`}
+                    />
+                  </span>
+                  <span
+                    className="col-start-1 row-start-1 inline-flex items-center gap-1.5 invisible pointer-events-none select-none"
+                    aria-hidden="true"
+                  >
+                    <span>LEISTUNGEN</span>
+                    <ChevronDown className="w-3.5 h-3.5" />
+                  </span>
                 </a>
 
                 {/* Services Dropdown Panel */}
@@ -211,9 +223,9 @@ export const Navbar: React.FC = () => {
               {/* EXPERTISE */}
               <a
                 href={navData.expertise.href}
-                className="text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2"
+                className="inline-grid place-items-center text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap"
               >
-                {navData.expertise.label}
+                <span className="col-start-1 row-start-1">{navData.expertise.label}</span>
               </a>
 
               {/* INSIGHTS (Dropdown: References, Media Library) */}
@@ -224,7 +236,7 @@ export const Navbar: React.FC = () => {
               >
                 <a
                   href={navData.insights.href}
-                  className={`flex items-center gap-1.5 text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 ${
+                  className={`inline-grid place-items-center text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap ${
                     openDropdown === 'insights' ? 'text-white' : 'text-[#A0A0AB] hover:text-white'
                   }`}
                   onClick={(e) => {
@@ -235,12 +247,21 @@ export const Navbar: React.FC = () => {
                   aria-expanded={openDropdown === 'insights'}
                   aria-haspopup="true"
                 >
-                  <span>{navData.insights.label}</span>
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 text-[#DFCA9E]/80 transition-transform duration-200 ${
-                      openDropdown === 'insights' ? 'rotate-180 text-[#DFCA9E]' : ''
-                    }`}
-                  />
+                  <span className="col-start-1 row-start-1 inline-flex items-center gap-1.5">
+                    <span>{navData.insights.label}</span>
+                    <ChevronDown
+                      className={`w-3.5 h-3.5 text-[#DFCA9E]/80 transition-transform duration-200 ${
+                        openDropdown === 'insights' ? 'rotate-180 text-[#DFCA9E]' : ''
+                      }`}
+                    />
+                  </span>
+                  <span
+                    className="col-start-1 row-start-1 inline-flex items-center gap-1.5 invisible pointer-events-none select-none"
+                    aria-hidden="true"
+                  >
+                    <span>EINBLICKE</span>
+                    <ChevronDown className="w-3.5 h-3.5" />
+                  </span>
                 </a>
 
                 {/* Insights Dropdown Panel */}
@@ -282,9 +303,15 @@ export const Navbar: React.FC = () => {
               {/* CONTACT */}
               <a
                 href={navData.contact.href}
-                className="text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2"
+                className="inline-grid place-items-center text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap"
               >
-                {navData.contact.label}
+                <span className="col-start-1 row-start-1">{navData.contact.label}</span>
+                <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
+                  KONTAKT
+                </span>
+                <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
+                  CONTACT
+                </span>
               </a>
             </nav>
 
@@ -293,16 +320,22 @@ export const Navbar: React.FC = () => {
               {/* Main CTA: REQUEST A PROJECT */}
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-2.5 py-1 rounded-sm text-[11px] font-semibold uppercase tracking-[0.12em] xl:tracking-[0.14em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
+                className="inline-grid place-items-center px-2.5 py-1 rounded-sm text-[11px] font-semibold uppercase tracking-[0.12em] xl:tracking-[0.14em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
               >
-                {navData.cta}
+                <span className="col-start-1 row-start-1">{navData.cta}</span>
+                <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
+                  REQUEST A PROJECT
+                </span>
+                <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
+                  PROJEKT ANFRAGEN
+                </span>
               </a>
 
               {/* Language Switcher: EN | DE (Absolute Far Right) */}
               <div
                 className="flex items-center rounded-sm border border-[#1A2F25] bg-[#0E1914] p-0.5 shrink-0"
                 role="group"
-                aria-label="Language selection"
+                aria-label={language === 'de' ? 'Sprachauswahl' : 'Language selection'}
               >
                 <button
                   type="button"
@@ -338,7 +371,7 @@ export const Navbar: React.FC = () => {
               <div
                 className="flex sm:hidden items-center rounded-sm border border-[#1A2F25] bg-[#0E1914] p-0.5"
                 role="group"
-                aria-label="Language selection"
+                aria-label={language === 'de' ? 'Sprachauswahl' : 'Language selection'}
               >
                 <button
                   type="button"
@@ -371,7 +404,7 @@ export const Navbar: React.FC = () => {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded text-[#A0A0A8] hover:text-white focus:outline-none transition-colors"
-                aria-label="Toggle menu"
+                aria-label={language === 'de' ? 'Menü umschalten' : 'Toggle menu'}
                 aria-expanded={mobileMenuOpen}
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -417,7 +450,7 @@ export const Navbar: React.FC = () => {
             <button
               onClick={closeMobileMenu}
               className="p-1.5 text-[#8C9991] hover:text-white rounded hover:bg-white/5 transition-colors"
-              aria-label="Close menu"
+              aria-label={language === 'de' ? 'Menü schließen' : 'Close menu'}
             >
               <X className="w-5 h-5" />
             </button>
@@ -448,7 +481,7 @@ export const Navbar: React.FC = () => {
                   type="button"
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                   className="p-2 text-[#DFCA9E]/80 hover:text-[#DFCA9E]"
-                  aria-label="Toggle Services submenu"
+                  aria-label={language === 'de' ? 'Leistungen-Untermenü umschalten' : 'Toggle Services submenu'}
                 >
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-200 ${
@@ -498,7 +531,7 @@ export const Navbar: React.FC = () => {
                   type="button"
                   onClick={() => setMobileInsightsOpen(!mobileInsightsOpen)}
                   className="p-2 text-[#DFCA9E]/80 hover:text-[#DFCA9E]"
-                  aria-label="Toggle Insights submenu"
+                  aria-label={language === 'de' ? 'Einblicke-Untermenü umschalten' : 'Toggle Insights submenu'}
                 >
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-200 ${
@@ -547,7 +580,7 @@ export const Navbar: React.FC = () => {
             <div
               className="flex items-center rounded-sm border border-[#1A2F25] bg-[#0E1914] p-0.5"
               role="group"
-              aria-label="Language selection"
+              aria-label={language === 'de' ? 'Sprachauswahl' : 'Language selection'}
             >
               <button
                 type="button"

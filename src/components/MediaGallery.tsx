@@ -184,7 +184,7 @@ export const MediaGallery: React.FC = () => {
             <button
               onClick={() => setSelectedId(null)}
               className="absolute top-4 right-4 z-20 w-9 h-9 rounded bg-[#080D0A]/80 hover:bg-[#15271E] text-white flex items-center justify-center border border-[#1A2F25] transition-colors"
-              aria-label="Close"
+              aria-label={language === 'de' ? 'Schließen' : 'Close'}
             >
               <X className="w-5 h-5" />
             </button>
@@ -200,7 +200,9 @@ export const MediaGallery: React.FC = () => {
                     preload="metadata"
                     className="w-full h-full object-contain"
                   >
-                    Your browser does not support the video tag.
+                    {language === 'de'
+                      ? 'Ihr Browser unterstützt das Video-Tag nicht.'
+                      : 'Your browser does not support the video tag.'}
                   </video>
                 </div>
               ) : (
