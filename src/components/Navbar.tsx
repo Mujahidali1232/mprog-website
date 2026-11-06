@@ -129,11 +129,11 @@ export const Navbar: React.FC = () => {
             </Link>
 
             {/* Desktop Refined Navigation Links: ABOUT, SERVICES, EXPERTISE, INSIGHTS, CONTACT */}
-            <nav className="hidden lg:flex items-center gap-3 xl:gap-6 shrink-0">
+            <nav className="hidden lg:flex items-center gap-3 shrink-0">
               {/* ABOUT */}
               <a
                 href={navData.about.href}
-                className="inline-grid place-items-center text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap"
+                className="inline-grid place-items-center text-xs text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] uppercase py-2 whitespace-nowrap"
               >
                 <span className="col-start-1 row-start-1">{navData.about.label}</span>
                 <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
@@ -149,7 +149,7 @@ export const Navbar: React.FC = () => {
               >
                 <a
                   href={navData.services.href}
-                  className={`inline-grid place-items-center text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap ${
+                  className={`inline-grid place-items-center text-xs transition-colors duration-150 font-medium tracking-[0.14em] uppercase py-2 whitespace-nowrap ${
                     openDropdown === 'services' ? 'text-white' : 'text-[#A0A0AB] hover:text-white'
                   }`}
                   onClick={(e) => {
@@ -223,7 +223,7 @@ export const Navbar: React.FC = () => {
               {/* EXPERTISE */}
               <a
                 href={navData.expertise.href}
-                className="inline-grid place-items-center text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap"
+                className="inline-grid place-items-center text-xs text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] uppercase py-2 whitespace-nowrap"
               >
                 <span className="col-start-1 row-start-1">{navData.expertise.label}</span>
               </a>
@@ -236,7 +236,7 @@ export const Navbar: React.FC = () => {
               >
                 <a
                   href={navData.insights.href}
-                  className={`inline-grid place-items-center text-xs xl:text-[13px] transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap ${
+                  className={`inline-grid place-items-center text-xs transition-colors duration-150 font-medium tracking-[0.14em] uppercase py-2 whitespace-nowrap ${
                     openDropdown === 'insights' ? 'text-white' : 'text-[#A0A0AB] hover:text-white'
                   }`}
                   onClick={(e) => {
@@ -303,7 +303,7 @@ export const Navbar: React.FC = () => {
               {/* CONTACT */}
               <a
                 href={navData.contact.href}
-                className="inline-grid place-items-center text-xs xl:text-[13px] text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] xl:tracking-[0.16em] uppercase py-2 whitespace-nowrap"
+                className="inline-grid place-items-center text-xs text-[#A0A0AB] hover:text-white transition-colors duration-150 font-medium tracking-[0.14em] uppercase py-2 whitespace-nowrap"
               >
                 <span className="col-start-1 row-start-1">{navData.contact.label}</span>
                 <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
@@ -316,11 +316,11 @@ export const Navbar: React.FC = () => {
             </nav>
 
             {/* Right Action Bar: REQUEST A PROJECT  +  EN | DE */}
-            <div className="hidden sm:flex items-center gap-2.5 xl:gap-3 shrink-0">
+            <div className="hidden sm:flex items-center gap-2.5 xl:gap-3 shrink-0 lg:ml-6">
               {/* Main CTA: REQUEST A PROJECT */}
               <a
                 href="#contact"
-                className="inline-grid place-items-center px-2.5 py-1 rounded-sm text-[11px] font-semibold uppercase tracking-[0.12em] xl:tracking-[0.14em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
+                className="inline-grid place-items-center px-2.5 py-1 rounded-sm text-[11px] font-semibold uppercase tracking-[0.12em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
               >
                 <span className="col-start-1 row-start-1">{navData.cta}</span>
                 <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
