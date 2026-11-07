@@ -14,38 +14,38 @@ export const GlobalReach: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-[#080D0A] border-b border-[#1A2F25]">
+    <section className="py-16 sm:py-24 lg:py-32 bg-[#080D0A] border-b border-[#1A2F25]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 items-start">
 
           {/* Left: Text */}
           <div className="lg:col-span-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4">
+            <h2 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3 sm:mb-4 break-words">
               {t.globalReach.title}
             </h2>
-            <p className="text-lg sm:text-xl text-[#DFCA9E] mb-6 font-normal">
+            <p className="text-base sm:text-lg lg:text-xl text-[#DFCA9E] mb-5 sm:mb-6 font-normal">
               {t.globalReach.subtitle}
             </p>
-            <p className="text-base text-[#B8C2BC] font-light leading-relaxed mb-5">
+            <p className="text-sm sm:text-base text-[#B8C2BC] font-light leading-relaxed mb-4 sm:mb-5">
               {t.globalReach.description}
             </p>
-            <p className="text-sm text-[#8C9991] font-light leading-relaxed mb-8">
+            <p className="text-sm text-[#8C9991] font-light leading-relaxed mb-0 lg:mb-8">
               {t.globalReach.subDescription}
             </p>
           </div>
 
           {/* Right: Region Cards */}
-          <div className="lg:col-span-6 space-y-4">
+          <div className="lg:col-span-6 space-y-3.5 sm:space-y-4">
             {t.globalReach.regions.map((region, idx) => (
               <div
                 key={idx}
-                className="group flex items-start gap-4 p-5 bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-colors duration-200 rounded"
+                className="group flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-colors duration-200 rounded"
               >
                 <div className="p-2.5 bg-[#0A100C] border border-[#1A2F25] rounded shrink-0">
                   {regionIcons[idx]}
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white mb-1">
+                <div className="min-w-0">
+                  <h3 className="text-base sm:text-lg font-bold text-white mb-1 break-words">
                     {region.name}
                   </h3>
                   <p className="text-sm text-[#8C9991] font-light leading-relaxed">

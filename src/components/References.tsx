@@ -7,126 +7,95 @@ import { Car, Hotel, Calendar, UserCheck, Shield } from 'lucide-react';
 export const References: React.FC = () => {
   const { t } = useLanguage();
 
+  const referenceCards = [
+    {
+      key: 'auto',
+      Icon: Car,
+      title: t.references.automotiveTitle,
+      items: t.references.automotivePartners,
+      footer: t.references.automotiveFooter,
+    },
+    {
+      key: 'hosp',
+      Icon: Hotel,
+      title: t.references.hospitalityTitle,
+      items: t.references.hospitalityPartners,
+      footer: t.references.hospitalityFooter,
+    },
+    {
+      key: 'events',
+      Icon: Calendar,
+      title: t.references.eventsTitle,
+      items: t.references.majorEvents,
+      footer: t.references.eventsFooter,
+    },
+  ];
+
   return (
-    <section id="references" className="py-24 sm:py-32 bg-[#080D0A] border-b border-[#1A2F25] scroll-mt-20">
+    <section id="references" className="py-16 sm:py-24 lg:py-32 bg-[#080D0A] border-b border-[#1A2F25] scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="max-w-3xl mb-14 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3">
+        <div className="max-w-3xl mb-10 sm:mb-14 lg:mb-16">
+          <h2 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3 break-words">
             {t.references.title}
           </h2>
-          <div className="mb-4">
-            <span className="text-[11px] uppercase tracking-[0.22em] text-[#DFCA9E] font-semibold">
+          <div className="mb-3 sm:mb-4">
+            <span className="text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.22em] text-[#DFCA9E] font-semibold">
               {t.references.eyebrow}
             </span>
           </div>
-          <p className="text-base text-[#8C9991] font-light max-w-2xl">
+          <p className="text-sm sm:text-base text-[#8C9991] font-light max-w-2xl">
             {t.references.subtitle}
           </p>
         </div>
 
         {/* 3 Reference Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8 items-start">
-
-          {/* Automotive Partners */}
-          <div className="group flex flex-col bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-all duration-300 ease-in-out rounded overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:shadow-[#DFCA9E]/5 cursor-pointer">
-            <div className="p-6 sm:p-7 flex-1">
-              <div className="flex items-center gap-3 transition-all duration-300 mb-0 group-hover:mb-6">
-                <div className="p-2.5 bg-[#0A100C] border border-[#1A2F25] rounded">
-                  <Car className="w-5 h-5 text-[#DFCA9E]" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-8 items-start">
+          {referenceCards.map(({ key, Icon, title, items, footer }) => (
+            <div
+              key={key}
+              tabIndex={0}
+              className="group flex flex-col bg-[#0E1914] hover:bg-[#101D17] border border-[#1A2F25] hover:border-[#DFCA9E]/40 focus-within:border-[#DFCA9E]/40 transition-[border-color,box-shadow,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] rounded overflow-hidden hover:shadow-lg hover:shadow-black/40 cursor-pointer outline-none"
+            >
+              <div className="p-5 sm:p-6 lg:p-7 flex-1">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 bg-[#0A100C] border border-[#1A2F25] group-hover:border-[#DFCA9E]/30 transition-colors duration-300 rounded shrink-0">
+                    <Icon className="w-5 h-5 text-[#DFCA9E]" />
+                  </div>
+                  <h3 className="text-lg lg:text-xl font-bold text-white leading-snug break-words min-w-0">
+                    {title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-white">
-                  {t.references.automotiveTitle}
-                </h3>
-              </div>
-              <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[420px] group-hover:opacity-100 transition-all duration-300 ease-in-out">
-                <ul className="space-y-2.5">
-                  {t.references.automotivePartners.map((partner, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-2.5 text-sm text-[#8C9991] pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
-                      <span className="font-medium text-[#E0E5E2]">{partner}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="px-6 py-3 border-t border-[#1A2F25] text-[10px] uppercase tracking-[0.15em] text-[#8C9991] bg-[#0A100C]">
-              {t.references.automotiveFooter}
-            </div>
-          </div>
-
-          {/* Luxury Hospitality */}
-          <div className="group flex flex-col bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-all duration-300 ease-in-out rounded overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:shadow-[#DFCA9E]/5 cursor-pointer">
-            <div className="p-6 sm:p-7 flex-1">
-              <div className="flex items-center gap-3 transition-all duration-300 mb-0 group-hover:mb-6">
-                <div className="p-2.5 bg-[#0A100C] border border-[#1A2F25] rounded">
-                  <Hotel className="w-5 h-5 text-[#DFCA9E]" />
+                <div className="grid grid-rows-[0fr] opacity-0 group-hover:grid-rows-[1fr] group-hover:opacity-100 group-focus-within:grid-rows-[1fr] group-focus-within:opacity-100 [@media(hover:none)]:grid-rows-[1fr] [@media(hover:none)]:opacity-100 transition-[grid-template-rows,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
+                  <div className="overflow-hidden">
+                    <ul className="pt-5 space-y-2.5">
+                      {items.map((entry, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-center gap-2.5 text-sm text-[#8C9991] pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
+                          <span className="font-medium text-[#E0E5E2] break-words min-w-0">{entry}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-white">
-                  {t.references.hospitalityTitle}
-                </h3>
               </div>
-              <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[420px] group-hover:opacity-100 transition-all duration-300 ease-in-out">
-                <ul className="space-y-2.5">
-                  {t.references.hospitalityPartners.map((hotel, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-2.5 text-sm pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
-                      <span className="font-medium text-[#E0E5E2]">{hotel}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="px-5 sm:px-6 py-3 border-t border-[#1A2F25] text-[10px] uppercase tracking-[0.14em] text-[#8C9991] bg-[#0A100C]">
+                {footer}
               </div>
             </div>
-            <div className="px-6 py-3 border-t border-[#1A2F25] text-[10px] uppercase tracking-[0.15em] text-[#8C9991] bg-[#0A100C]">
-              {t.references.hospitalityFooter}
-            </div>
-          </div>
-
-          {/* Major Events */}
-          <div className="group flex flex-col bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-all duration-300 ease-in-out rounded overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:shadow-[#DFCA9E]/5 cursor-pointer">
-            <div className="p-6 sm:p-7 flex-1">
-              <div className="flex items-center gap-3 transition-all duration-300 mb-0 group-hover:mb-6">
-                <div className="p-2.5 bg-[#0A100C] border border-[#1A2F25] rounded">
-                  <Calendar className="w-5 h-5 text-[#DFCA9E]" />
-                </div>
-                <h3 className="text-xl font-bold text-white">
-                  {t.references.eventsTitle}
-                </h3>
-              </div>
-              <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[420px] group-hover:opacity-100 transition-all duration-300 ease-in-out">
-                <ul className="space-y-2.5">
-                  {t.references.majorEvents.map((event, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-2.5 text-sm pb-2.5 border-b border-[#1A2F25] last:border-b-0 last:pb-0"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#DFCA9E] shrink-0" />
-                      <span className="font-medium text-[#E0E5E2]">{event}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="px-6 py-3 border-t border-[#1A2F25] text-[10px] uppercase tracking-[0.15em] text-[#8C9991] bg-[#0A100C]">
-              {t.references.eventsFooter}
-            </div>
-          </div>
-
+          ))}
         </div>
 
         {/* VIP Guests Panel */}
-        <div className="bg-[#0C1A14] border border-[#1A2F25] rounded p-8 sm:p-10">
-          <div className="mb-8">
+        <div className="bg-[#0C1A14] border border-[#1A2F25] rounded p-5 sm:p-8 lg:p-10">
+          <div className="mb-6 sm:mb-8">
             <div className="flex items-center gap-3 mb-3">
-              <Shield className="w-5 h-5 text-[#DFCA9E]" />
-              <h3 className="text-2xl sm:text-3xl font-bold text-white">
+              <Shield className="w-5 h-5 text-[#DFCA9E] shrink-0" />
+              <h3 className="text-xl min-[360px]:text-2xl sm:text-3xl font-bold text-white break-words">
                 {t.references.vipTitle}
               </h3>
             </div>
@@ -135,14 +104,14 @@ export const References: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6 sm:mb-8">
             {t.references.vipGuests.map((guest, idx) => (
               <div
                 key={idx}
                 className="flex items-center gap-3 p-3.5 bg-[#080D0A]/70 border border-[#1A2F25] rounded"
               >
                 <UserCheck className="w-4 h-4 text-[#DFCA9E] shrink-0" />
-                <span className="text-xs text-[#D0D7D2] font-medium leading-snug">
+                <span className="text-xs text-[#D0D7D2] font-medium leading-snug break-words min-w-0">
                   {guest}
                 </span>
               </div>

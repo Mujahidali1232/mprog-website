@@ -10,6 +10,7 @@ import { References } from '@/components/References';
 import { MediaGallery } from '@/components/MediaGallery';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
+import { BackToTop } from '@/components/BackToTop';
 
 export default function HomePage() {
   return (
@@ -49,6 +50,9 @@ export default function HomePage() {
 
       {/* Corporate Luxury Footer */}
       <Footer />
+
+      {/* Floating Smooth Back-to-Top Button */}
+      <BackToTop />
     </div>
   );
 }

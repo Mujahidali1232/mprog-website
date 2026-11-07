@@ -18,6 +18,9 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 *, *::before, *::after, html, body, button, input, select, textarea {
@@ -29,6 +32,7 @@ body {
   background: var(--background);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 ::selection {
@@ -62,7 +66,36 @@ body {
 
 /* Section anchor offset for fixed header */
 section[id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 88px;
+}
+
+/* Smooth GPU-composited modal & popup entrance */
+@keyframes modalBackdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalPanelPopIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.modal-backdrop-enter {
+  animation: modalBackdropFadeIn 200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.modal-panel-enter {
+  animation: modalPanelPopIn 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Reduced Motion */
