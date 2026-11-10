@@ -381,7 +381,7 @@ export const Navbar: React.FC = () => {
               {/* Main CTA: REQUEST A PROJECT */}
               <a
                 href="#contact"
-                className="hidden md:inline-grid place-items-center px-2.5 xl:px-3 py-1.5 rounded-sm text-[10px] xl:text-[11px] font-semibold uppercase tracking-[0.09em] xl:tracking-[0.12em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
+                className="hidden md:inline-grid place-items-center px-2 xl:px-2.5 py-1 rounded-sm text-[10px] xl:text-[11px] font-semibold uppercase tracking-[0.09em] xl:tracking-[0.12em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
               >
                 <span className="col-start-1 row-start-1">{navData.cta}</span>
                 <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
