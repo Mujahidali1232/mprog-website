@@ -5,9 +5,9 @@ export const deContent: SiteContent = {
     links: [
       { id: 'about', label: 'Über Uns', href: '#about' },
       { id: 'services', label: 'Leistungen', href: '#services' },
-      { id: 'coaching', label: 'Training & Coaching', href: '#training-coaching' },
+      { id: 'coaching', label: 'Schulung & Coaching', href: '#training-coaching' },
       { id: 'consulting', label: 'Beratung', href: '#consulting' },
-      { id: 'events', label: 'Events & VIP', href: '#events-vip' },
+      { id: 'events', label: 'Veranstaltungen & VIP', href: '#events-vip' },
       { id: 'references', label: 'Referenzen', href: '#references' },
       { id: 'media', label: 'Mediathek', href: '#media' },
       { id: 'contact', label: 'Kontakt', href: '#contact' },
@@ -26,7 +26,7 @@ export const deContent: SiteContent = {
     stats: [
       { value: '15+', label: 'Jahre Expertise', sublabel: 'Automobilindustrie weltweit' },
       { value: '25+', label: 'Länder weltweit', sublabel: 'Europa, Nahost, Nordafrika' },
-      { value: '35+', label: 'AUTOMOBIL & HOSPITALITY', sublabel: 'Marken' },
+      { value: '35+', label: 'AUTOMOBIL & Gastlichkeit', sublabel: 'Marken' },
     ],
   },
   about: {
@@ -94,7 +94,7 @@ export const deContent: SiteContent = {
     {
       id: 'training-coaching',
       badge: 'Säule 01',
-      title: 'Training & Coaching',
+      title: 'Schulung & Coaching',
       tagline: 'Wissen in messbare Leistung transformieren',
       intro:
         'Getrieben von Innovation sind unsere Trainings- und Coachingprogramme darauf ausgelegt, Wissen in messbare Leistung umzuwandeln. Wir kombinieren moderne Trainingsmethoden, praxisnahes Coaching und tiefes Produktwissen, um Verkaufsberater, Produktexperten und Führungskräfte auf höchstem Niveau zu entwickeln. Von Produktschulungen über Customer Experience bis hin zum Luxus-Mindset – unser Ansatz sorgt für konsistente, souveräne und wirkungsvolle Kundeninteraktionen.',
@@ -189,10 +189,10 @@ export const deContent: SiteContent = {
     {
       id: 'events-vip',
       badge: 'Säule 03',
-      title: 'Events, Markenerlebnisse & VIP Services',
+      title: 'Veranstaltungen, Markenerlebnisse & VIP-Leistungen',
       tagline: 'Unvergessliche Momente und emotionale Markenbindung',
       intro:
-        'Getrieben von Innovation entwickeln wir Automotive-Events und Markenerlebnisse, die weit über klassische Präsentationen hinausgehen. Von internationalen Automobilmessen bis zu exklusiven VIP-Aktivierungen gestalten wir Erlebnisse, die Kunden emotional mit der Marke verbinden. Durch Storytelling, professionelle Produktpräsentationen und hochwertiges Gästemanagement machen wir jede Interaktion zu einem besonderen Moment.',
+        'Getrieben von Innovation entwickeln wir Automotive-Veranstaltungen und Markenerlebnisse, die weit über klassische Präsentationen hinausgehen. Von internationalen Automobilmessen bis zu exklusiven VIP-Aktivierungen gestalten wir Erlebnisse, die Kunden emotional mit der Marke verbinden. Durch Storytelling, professionelle Produktpräsentationen und hochwertiges Gästemanagement machen wir jede Interaktion zu einem besonderen Moment.',
       outcome: 'Das Ergebnis: starke Markenpräsenz und unvergessliche Erlebnisse mit nachhaltiger Wirkung.',
       image: '/assets/images/Event 1.jpg',
       categories: [
@@ -217,7 +217,7 @@ export const deContent: SiteContent = {
         {
           title: 'VIP-Betreuung',
           items: [
-            'Exklusive Hospitality für VIP-Kunden',
+            'Exklusive Gastlichkeit für VIP-Kunden',
             'Exklusive Preview-Erlebnisse',
             'Hochwertiges Gästemanagement',
           ],
@@ -251,11 +251,11 @@ export const deContent: SiteContent = {
       {
         step: '03',
         title: 'Umsetzung',
-        description: 'Wir führen Trainings, Beratung und Events präzise und professionell durch.',
+        description: 'Wir führen Trainings, Beratung und Veranstaltungen präzise und professionell durch.',
       },
       {
         step: '04',
-        title: 'Follow-up & Optimierung',
+        title: 'Nachbetreuung & Optimierung',
         description: 'Wir sichern nachhaltige Ergebnisse durch Analyse und Weiterentwicklung.',
       },
     ],
@@ -271,11 +271,11 @@ export const deContent: SiteContent = {
     headquartersLabel: 'Hauptsitz München · Tätig in 25+ Ländern',
     regions: [
       {
-        name: 'Europa',
+        name: 'Europa Veranstaltungen',
         description: 'Unterstützung für Hersteller, Importeure und Handelsnetzwerke.',
       },
       {
-        name: 'Naher Osten',
+        name: 'Naher Osten Veranstaltungen',
         description: 'Unterstützung für Hersteller, Importeure und Handelsnetzwerke.',
       },
       {
@@ -301,12 +301,12 @@ export const deContent: SiteContent = {
   references: {
     eyebrow: 'Vertrauen führender Marken',
     title: 'Referenzen',
-    subtitle: 'Zusammenarbeit mit Automobilpartnern, Luxus-Hospitality und internationalen Events.',
+    subtitle: 'Zusammenarbeit mit Automobilpartnern, Luxus-Gastlichkeit und internationalen Veranstaltungen.',
     automotiveTitle: 'Automobilpartner',
     automotivePartners: [
-      'BMW Group Deutschland',
-      'BMW Group Schweiz',
-      'BMW Group Naher Osten',
+      'BMW Gruppe Deutschland',
+      'BMW Gruppe Schweiz',
+      'BMW Gruppe Naher Osten',
       'BMW Nordafrika',
       'Mercedes-Benz Deutschland',
       'Rolls-Royce Irak',
@@ -314,13 +314,13 @@ export const deContent: SiteContent = {
       'BYD Europa',
     ],
     automotiveFooter: 'OEM & Handelsnetzwerke',
-    hospitalityTitle: 'Luxus-Hospitality',
+    hospitalityTitle: 'Luxus-Gastlichkeit',
     hospitalityPartners: [
       'Mandarin Oriental München',
       'Kempinski Hotel München',
     ],
     hospitalityFooter: 'Standards der Luxus-Hotellerie',
-    eventsTitle: 'Wichtige Events',
+    eventsTitle: 'Wichtige Veranstaltungen',
     majorEvents: [
       'Concorso d\'Eleganza Villa d\'Este',
       'IAA Frankfurt & IAA München',
@@ -349,15 +349,15 @@ export const deContent: SiteContent = {
     title: 'Medien',
     subtitle: 'Erleben Sie unsere Arbeit in Aktion',
     description:
-      'Unsere Mediathek zeigt reale Eindrücke aus internationalen Automotive-Events, Produkttrainings, Präsentationen und VIP-Erlebnissen. Diese Einblicke spiegeln Qualität, Energie und Professionalität wider.',
+      'Unsere Mediathek zeigt reale Eindrücke aus internationalen Automotive-Veranstaltungen, Produkttrainings, Präsentationen und VIP-Erlebnissen. Diese Einblicke spiegeln Qualität, Energie und Professionalität wider.',
     filters: {
       all: 'Alle',
-      training: 'Training & Coaching',
-      events: 'Events',
+      training: 'Schulung & Coaching',
+      events: 'Veranstaltungen',
     },
     categoryLabels: {
-      training: 'Training & Coaching',
-      events: 'Events',
+      training: 'Schulung & Coaching',
+      events: 'Veranstaltungen',
     },
     playLabel: 'Video abspielen',
     viewLabel: 'Ansicht öffnen',
@@ -426,7 +426,7 @@ export const deContent: SiteContent = {
       // Events Videos (Placed at top)
       {
         id: 'vid-event-1',
-        title: 'Automotive-Event-Einblicke I',
+        title: 'Automotive-Veranstaltungseinblicke I',
         category: 'events',
         type: 'video',
         src: '/assets/videos/Video Event 1.mp4',
@@ -435,7 +435,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'vid-event-2',
-        title: 'Automotive-Event-Einblicke II',
+        title: 'Automotive-Veranstaltungseinblicke II',
         category: 'events',
         type: 'video',
         src: '/assets/videos/Video Event 2.MP4',
@@ -453,7 +453,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'vid-event-4',
-        title: 'VIP-Event-Aktivierung',
+        title: 'VIP-Veranstaltungsaktivierung',
         category: 'events',
         type: 'video',
         src: '/assets/videos/Video Event 4.mp4',
@@ -482,7 +482,7 @@ export const deContent: SiteContent = {
       // Events Photos (Placed below videos)
       {
         id: 'img-event-1',
-        title: 'Automotive-Keynote & Bühnen-Event',
+        title: 'Automotive-Keynote & Bühnenveranstaltung',
         category: 'events',
         type: 'image',
         src: '/assets/images/Event 1.jpg',
@@ -498,7 +498,7 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-event-3',
-        title: 'Fahrzeug-Enthüllungs-Event',
+        title: 'Fahrzeug-Enthüllungsveranstaltung',
         category: 'events',
         type: 'image',
         src: '/assets/images/Event 3.JPG',
@@ -510,7 +510,7 @@ export const deContent: SiteContent = {
         category: 'events',
         type: 'image',
         src: '/assets/images/Event 4.jpeg',
-        description: 'Betreuung hochrangiger VIP-Gäste und Hospitality.',
+        description: 'Betreuung hochrangiger VIP-Gäste und Gastlichkeit.',
       },
       {
         id: 'img-event-5',
@@ -618,11 +618,11 @@ export const deContent: SiteContent = {
       },
       {
         id: 'img-vip-main',
-        title: 'Exklusive VIP-Hospitality',
+        title: 'Exklusive VIP-Gastlichkeit',
         category: 'events',
         type: 'image',
         src: '/assets/images/vip.jpg',
-        description: 'Exklusive Hospitality für VIP-Gäste.',
+        description: 'Exklusive Gastlichkeit für VIP-Gäste.',
       },
     ],
   },
@@ -655,9 +655,9 @@ export const deContent: SiteContent = {
       serviceLabel: 'Gewünschte Leistung',
       serviceOptions: {
         all: 'Bitte wählen Sie einen Bereich',
-        training: 'Training & Coaching',
+        training: 'Schulung & Coaching',
         consulting: 'Beratung für Automobilhändler',
-        events: 'Events, Markenerlebnisse & VIP Services',
+        events: 'Veranstaltungen, Markenerlebnisse & VIP-Leistungen',
         general: 'Allgemeine Anfrage',
       },
       messageLabel: 'Ihre Nachricht / Projektvorhaben',
@@ -678,8 +678,8 @@ export const deContent: SiteContent = {
       { label: 'Verkaufstraining & Luxus-Mindset', href: '#training-coaching' },
       { label: 'Showroom- & Management-Coaching', href: '#training-coaching' },
       { label: 'Beratung für den Automobilhandel', href: '#consulting' },
-      { label: 'Events & Moderation', href: '#events-vip' },
-      { label: 'VIP-Betreuung & Hospitality', href: '#events-vip' },
+      { label: 'Veranstaltungen & Moderation', href: '#events-vip' },
+      { label: 'VIP-Betreuung & Gastlichkeit', href: '#events-vip' },
     ],
     contactTitle: 'Kontaktinformationen',
     allRightsReserved: 'Alle Rechte vorbehalten.',

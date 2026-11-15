@@ -271,11 +271,11 @@ export const enContent: SiteContent = {
     headquartersLabel: 'Munich Headquarters · Operating in 25+ Countries',
     regions: [
       {
-        name: 'Europe',
+        name: 'Europe Events',
         description: 'Manufacturer, importer and retail network support.',
       },
       {
-        name: 'Middle East',
+        name: 'Middle East Events',
         description: 'Manufacturer, importer and retail network support.',
       },
       {

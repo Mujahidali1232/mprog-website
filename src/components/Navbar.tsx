@@ -378,20 +378,6 @@ export const Navbar: React.FC = () => {
 
             {/* Unified Right Action Bar: CTA (md+) + EN | DE + Hamburger (<lg) */}
             <div className="flex items-center gap-1.5 sm:gap-2.5 xl:gap-3 shrink-0 lg:ml-2 xl:ml-6">
-              {/* Main CTA: REQUEST A PROJECT */}
-              <a
-                href="#contact"
-                className="hidden md:inline-grid place-items-center px-2 xl:px-2.5 py-1 rounded-sm text-[10px] xl:text-[11px] font-semibold uppercase tracking-[0.09em] xl:tracking-[0.12em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
-              >
-                <span className="col-start-1 row-start-1">{navData.cta}</span>
-                <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
-                  REQUEST A PROJECT
-                </span>
-                <span className="col-start-1 row-start-1 invisible pointer-events-none select-none" aria-hidden="true">
-                  PROJEKT ANFRAGEN
-                </span>
-              </a>
-
               {/* Language Switcher: EN | DE */}
               <div
                 className="flex items-center rounded-sm border border-[#1A2F25] bg-[#0E1914] p-0.5 shrink-0"
@@ -425,6 +411,14 @@ export const Navbar: React.FC = () => {
                   DE
                 </button>
               </div>
+
+              {/* Main CTA: REQUEST */}
+              <a
+                href="#contact"
+                className="hidden md:inline-grid place-items-center px-2 xl:px-2.5 py-1 rounded-sm text-[10px] xl:text-[11px] font-semibold uppercase tracking-[0.09em] xl:tracking-[0.12em] bg-[#DFCA9E] hover:bg-[#EFE1C6] text-[#080D0A] transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#DFCA9E]/15 whitespace-nowrap"
+              >
+                {language === 'de' ? 'ANFRAGE' : 'REQUEST'}
+              </a>
 
               {/* Mobile / Tablet Hamburger Button */}
               <button

@@ -112,13 +112,10 @@ export const About: React.FC = () => {
           </div>
 
           {/* Desktop (1024px+): 3 independent columns */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-x-4 xl:gap-x-5 items-start">
-            {[0, 1, 2].map((colIdx) => (
-              <div key={colIdx} className="flex flex-col">
-                {t.about.philosophy
-                  .map((item, idx) => ({ item, idx }))
-                  .filter(({ idx }) => idx % 3 === colIdx)
-                  .map(({ item, idx }) => renderPhilosophyCard(item, idx))}
+          <div className="hidden lg:flex lg:flex-wrap lg:justify-center gap-x-4 xl:gap-x-5 items-start">
+            {t.about.philosophy.map((item, idx) => (
+              <div key={idx} className="w-[calc((100%-2rem)/3)] xl:w-[calc((100%-2.5rem)/3)]">
+                {renderPhilosophyCard(item, idx)}
               </div>
             ))}
           </div>

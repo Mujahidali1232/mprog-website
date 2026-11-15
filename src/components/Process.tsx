@@ -37,9 +37,6 @@ export const Process: React.FC = () => {
                 <span className="text-3xl min-[360px]:text-4xl sm:text-5xl font-bold text-[#DFCA9E]/25 leading-none">
                   {item.step}
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.15em] text-[#8C9991] font-sans border border-[#1A2F25] px-2 py-1 rounded bg-[#080D0A]/50 shrink-0">
-                  {String(idx + 1).padStart(2, '0')}
-                </span>
               </div>
 
               <h3 className="text-base sm:text-lg font-bold text-white mb-2.5 sm:mb-3 leading-snug break-words">

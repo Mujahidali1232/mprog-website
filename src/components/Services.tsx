@@ -61,7 +61,7 @@ export const Services: React.FC = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-[#080D0A]/85 via-[#080D0A]/20 to-transparent" />
 
                       {/* Bottom Label */}
-                      {service.id !== 'consulting' && (
+                      {service.id !== 'consulting' && service.id !== 'events-vip' && (
                         <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 border-t border-white/10">
                           <h4 className="text-lg sm:text-xl font-bold text-white leading-tight break-words">
                             {service.title}
