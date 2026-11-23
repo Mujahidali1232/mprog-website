@@ -64,11 +64,10 @@ export const MediaGallery: React.FC = () => {
                 key={btn.key}
                 type="button"
                 onClick={() => setActiveFilter(btn.key)}
-                className={`min-h-[40px] px-3.5 sm:px-4 py-2.5 rounded-sm text-xs font-semibold uppercase tracking-[0.1em] transition-all duration-200 ${
-                  activeFilter === btn.key
+                className={`min-h-[40px] px-3.5 sm:px-4 py-2.5 rounded-sm text-xs font-semibold uppercase tracking-[0.1em] transition-all duration-200 ${activeFilter === btn.key
                     ? 'bg-[#DFCA9E] text-[#080D0A] shadow-sm'
                     : 'bg-[#0E1914] text-[#8C9991] hover:text-white border border-[#1A2F25] hover:border-[#DFCA9E]/40'
-                }`}
+                  }`}
               >
                 {btn.label}
               </button>
@@ -118,9 +117,8 @@ export const MediaGallery: React.FC = () => {
                       <span className="truncate">{t.media.categoryLabels.training}</span>
                     </div>
                     <div
-                      className={`absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-                        item.type === 'video' ? '[@media(hover:none)]:opacity-95' : ''
-                      }`}
+                      className={`absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${item.type === 'video' ? '[@media(hover:none)]:opacity-95' : ''
+                        }`}
                     >
                       <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#DFCA9E] text-[#080D0A] flex items-center justify-center shadow-lg transition-transform duration-200 group-hover:scale-110">
                         {item.type === 'video' ? (
@@ -184,9 +182,8 @@ export const MediaGallery: React.FC = () => {
                       <span className="truncate">{t.media.categoryLabels.events}</span>
                     </div>
                     <div
-                      className={`absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-                        item.type === 'video' ? '[@media(hover:none)]:opacity-95' : ''
-                      }`}
+                      className={`absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${item.type === 'video' ? '[@media(hover:none)]:opacity-95' : ''
+                        }`}
                     >
                       <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#DFCA9E] text-[#080D0A] flex items-center justify-center shadow-lg transition-transform duration-200 group-hover:scale-110">
                         {item.type === 'video' ? (

@@ -134,7 +134,7 @@ export const Navbar: React.FC = () => {
       label: language === 'de' ? 'KONTAKT' : 'CONTACT',
       href: '#contact',
     },
-    cta: language === 'de' ? 'PROJEKT ANFRAGEN' : 'REQUEST A PROJECT',
+    cta: language === 'de' ? 'ANFRAGE' : 'REQUEST',
   };
 
   return (
