@@ -32,11 +32,11 @@ export const MediaGallery: React.FC = () => {
     { key: 'events', label: t.media.filters.events },
   ];
 
-  // Helper to sort category items: Video cards first at top, Photo cards below
+  // Helper to sort category items: Photo cards first at top, Video cards below
   const getSortedCategoryItems = (category: 'training' | 'events') => {
     return t.media.items
       .filter((item) => item.category === category)
-      .sort((a, b) => (a.type === 'video' ? -1 : b.type === 'video' ? 1 : 0));
+      .sort((a, b) => (a.type === 'image' ? -1 : b.type === 'image' ? 1 : 0));
   };
 
   const trainingItems = getSortedCategoryItems('training');
@@ -262,7 +262,7 @@ export const MediaGallery: React.FC = () => {
               {/* Modal Info */}
               <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-1.5 sm:pt-2">
                 <span className="text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.18em] text-[#DFCA9E] font-semibold block">
-                  {t.media.categoryLabels[selectedItem.category] || selectedItem.category} · Mobile Product Genius UG
+                  {t.media.categoryLabels[selectedItem.category] || selectedItem.category} · Mobile Product Genius
                 </span>
                 <h3 className="text-base sm:text-2xl font-bold text-white mt-1 mb-1 sm:mb-2 break-words">
                   {selectedItem.title}

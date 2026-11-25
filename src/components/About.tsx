@@ -39,7 +39,7 @@ export const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="mb-12 sm:mb-16 lg:mb-20">
+        <div className="mb-6 sm:mb-8 lg:mb-10">
           <h2 className="text-2xl min-[360px]:text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-3 break-words">
             {t.about.title}
           </h2>
@@ -71,7 +71,7 @@ export const About: React.FC = () => {
             <div className="relative rounded overflow-hidden group border border-[#1A2F25]">
               <div className="relative aspect-[4/5] w-full">
                 <Image
-                  src={images.about || "/assets/images/Modaration.JPG"}
+                  src={images.about || "/assets/images/about.jpeg"}
                   alt={language === 'de' ? 'Mobile Product Genius Keynote-Bühnenerlebnis' : 'Mobile Product Genius Keynote Stage Experience'}
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"

@@ -1,22 +1,16 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
-import { Compass, Globe2, MapPin } from 'lucide-react';
 
 export const GlobalReach: React.FC = () => {
-  const { t } = useLanguage();
-
-  const regionIcons = [
-    <Globe2 key="globe" className="w-5 h-5 text-[#DFCA9E]" />,
-    <Compass key="compass" className="w-5 h-5 text-[#DFCA9E]" />,
-    <MapPin key="pin" className="w-5 h-5 text-[#DFCA9E]" />,
-  ];
+  const { t, language } = useLanguage();
 
   return (
     <section className="py-16 sm:py-24 lg:py-32 bg-[#080D0A] border-b border-[#1A2F25]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 items-center">
 
           {/* Left: Text */}
           <div className="lg:col-span-6">
@@ -29,31 +23,23 @@ export const GlobalReach: React.FC = () => {
             <p className="text-sm sm:text-base text-[#B8C2BC] font-light leading-relaxed mb-4 sm:mb-5">
               {t.globalReach.description}
             </p>
-            <p className="text-sm text-[#8C9991] font-light leading-relaxed mb-0 lg:mb-8">
+            <p className="text-sm text-[#8C9991] font-light leading-relaxed mb-0">
               {t.globalReach.subDescription}
             </p>
           </div>
 
-          {/* Right: Region Cards */}
-          <div className="lg:col-span-6 space-y-3.5 sm:space-y-4">
-            {t.globalReach.regions.map((region, idx) => (
-              <div
-                key={idx}
-                className="group flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 bg-[#0E1914] border border-[#1A2F25] hover:border-[#DFCA9E]/35 transition-colors duration-200 rounded"
-              >
-                <div className="p-2.5 bg-[#0A100C] border border-[#1A2F25] rounded shrink-0">
-                  {regionIcons[idx]}
-                </div>
-                <div className="min-w-0">
-                  <h3 className="text-base sm:text-lg font-bold text-white mb-1 break-words">
-                    {region.name}
-                  </h3>
-                  <p className="text-sm text-[#8C9991] font-light leading-relaxed">
-                    {region.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* Right: Visual */}
+          <div className="lg:col-span-6">
+            <div className="relative h-[260px] sm:h-[360px] lg:h-[400px] overflow-hidden rounded group border border-[#1A2F25]">
+              <Image
+                src="/assets/images/Modaration.JPG"
+                alt={language === 'de' ? 'Mobile Product Genius – Internationale Bühnenmoderation' : 'Mobile Product Genius – International Stage Moderation'}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080D0A]/80 via-[#080D0A]/15 to-transparent" />
+            </div>
           </div>
 
         </div>

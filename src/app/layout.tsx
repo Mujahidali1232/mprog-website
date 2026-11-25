@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     'Mercedes-Benz',
     'München',
   ],
-  authors: [{ name: 'Mobile Product Genius UG' }],
-  creator: 'Mobile Product Genius UG',
-  publisher: 'Mobile Product Genius UG',
+  authors: [{ name: 'Mobile Product Genius' }],
+  creator: 'Mobile Product Genius',
+  publisher: 'Mobile Product Genius',
   formatDetection: {
     email: false,
     address: false,
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Mobile Product Genius UG',
+  name: 'Mobile Product Genius',
   alternateName: ['MProG', 'MPG'],
   url: 'https://www.mprog.eu',
   logo: 'https://www.mprog.eu/assets/images/mprog-logo.png',

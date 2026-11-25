@@ -1,31 +1,51 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
+import React, { useRef, useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { useImages } from '@/context/ImageContext';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Volume2, VolumeX } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const { t, language } = useLanguage();
-  const { images } = useImages();
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
 
   return (
     <section className="relative min-h-screen min-h-[100svh] flex flex-col justify-end pb-0 bg-[#080D0A]">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src={images.hero || "/assets/images/Product presentation 1.jpg"}
-          alt={language === 'de' ? 'Mobile Product Genius – Keynote-Bühne mit BMW 7er' : 'Mobile Product Genius – Keynote Stage with BMW 7 Series'}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[70%_20%] md:object-center"
+        <video
+          ref={videoRef}
+          src="/assets/videos/BMW 7 Series Training Jordan 2026.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         {/* Dark overlay - gradient from bottom and side with subtle green undertone */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#080D0A] via-[#080D0A]/80 to-[#080D0A]/35" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#080D0A]/90 via-[#080D0A]/55 to-transparent" />
       </div>
+
+      {/* Sound toggle button */}
+      <button
+        onClick={toggleMute}
+        className="absolute top-24 right-4 sm:top-28 sm:right-6 lg:right-8 z-20 w-9 h-9 flex items-center justify-center rounded-full bg-black/40 border border-white/20 text-white hover:bg-black/60 hover:border-[#DFCA9E]/50 transition-all duration-200"
+        aria-label={
+          language === 'de'
+            ? isMuted ? 'Ton einschalten' : 'Ton ausschalten'
+            : isMuted ? 'Unmute video' : 'Mute video'
+        }
+      >
+        {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+      </button>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24 sm:pt-28 lg:pt-32 pb-0">

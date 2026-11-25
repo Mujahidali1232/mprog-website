@@ -5,7 +5,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { Mail, MapPin, Globe, CheckCircle, Send } from 'lucide-react';
 
 export const Contact: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,19 +13,48 @@ export const Contact: React.FC = () => {
     service: 'training',
     message: '',
   });
+  const [honeypot, setHoneypot] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorText, setErrorText] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setErrorText(t.contact.form.errorMessage);
       setStatus('error');
       return;
     }
+
     setStatus('submitting');
-    setTimeout(() => {
+    setErrorText('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          language,
+          website: honeypot,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error || 'Request failed');
+      }
+
       setStatus('success');
       setFormData({ name: '', email: '', company: '', service: 'training', message: '' });
-    }, 700);
+      setHoneypot('');
+    } catch {
+      setErrorText(
+        language === 'de'
+          ? 'Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an info@mprog.eu.'
+          : 'Could not send your message. Please try again or email info@mprog.eu directly.'
+      );
+      setStatus('error');
+    }
   };
 
   return (
@@ -136,9 +165,21 @@ export const Contact: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                  {/* Honeypot anti-spam field */}
+                  <input
+                    type="text"
+                    name="website"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="hidden"
+                  />
+
                   {status === 'error' && (
                     <div className="p-3.5 bg-red-950/50 border border-red-800/60 text-xs text-red-300 rounded">
-                      {t.contact.form.errorMessage}
+                      {errorText || t.contact.form.errorMessage}
                     </div>
                   )}
 

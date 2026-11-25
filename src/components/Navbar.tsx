@@ -94,7 +94,7 @@ export const Navbar: React.FC = () => {
       href: '#services',
       items: [
         {
-          label: language === 'de' ? 'Training & Coaching' : 'Training & Coaching',
+          label: language === 'de' ? 'Schulung & Coaching' : 'Training & Coaching',
           href: '#training-coaching',
           desc: language === 'de' ? 'Produkt-, EV- & Vertriebstraining' : 'Product, EV & Sales Mindset Training',
         },
@@ -104,9 +104,9 @@ export const Navbar: React.FC = () => {
           desc: language === 'de' ? 'Automobilhandel & Prozessoptimierung' : 'Dealership & Process Optimization',
         },
         {
-          label: language === 'de' ? 'Events & VIP' : 'Events & VIP',
+          label: language === 'de' ? 'Veranstaltungen & VIP' : 'Events & VIP',
           href: '#events-vip',
-          desc: language === 'de' ? 'Markenerlebnisse & VIP Hospitality' : 'Brand Experiences & VIP Hospitality',
+          desc: language === 'de' ? 'Markenerlebnisse & VIP-Gastlichkeit' : 'Brand Experiences & VIP Hospitality',
         },
       ],
     },

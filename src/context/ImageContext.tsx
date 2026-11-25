@@ -23,7 +23,10 @@ export const ALL_LIBRARY_IMAGES: LibraryImage[] = [
   { id: 'prod-pres-1', src: '/assets/images/Product presentation 1.jpg', title: 'Product Presentation & Keynote', resolution: 'Master High-Res', category: 'hero' },
   { id: 'modaration', src: '/assets/images/Modaration.JPG', title: 'Stage Moderation & Keynote Presentation', resolution: 'Master High-Res', category: 'events' },
   { id: 'prod-train-1', src: '/assets/images/Product Training 1.JPG', title: 'Product & Technical Training I', resolution: 'Master High-Res', category: 'training' },
+  { id: 'prod-train-new', src: '/assets/images/product-training-new.JPG', title: 'Product Training New', resolution: 'Master High-Res', category: 'training' },
+  { id: 'automotive-consulting', src: '/assets/images/Automotive.jpeg', title: 'Consulting for Automotive Retailers', resolution: 'Master High-Res', category: 'training' },
   { id: 'prod-train-2', src: '/assets/images/Product Training 2.JPG', title: 'Product & Technical Training II', resolution: 'Master High-Res', category: 'training' },
+  { id: 'event-new', src: '/assets/images/event.jpeg', title: 'Events & VIP Brand Experience', resolution: 'Master High-Res', category: 'events' },
   { id: 'event-1', src: '/assets/images/Event 1.jpg', title: 'Automotive Event & Live Stage Presentation', resolution: 'Master High-Res', category: 'events' },
   { id: 'event-2', src: '/assets/images/Event 2.JPG', title: 'Vehicle Launch & Brand Activation', resolution: 'Master High-Res', category: 'events' },
   { id: 'event-3', src: '/assets/images/Event 3.JPG', title: 'Automotive Exhibition & Live Presentation', resolution: 'Master High-Res', category: 'events' },
@@ -46,10 +49,10 @@ export const ALL_LIBRARY_IMAGES: LibraryImage[] = [
 
 const DEFAULT_SELECTIONS: ImageSelectionMap = {
   hero: '/assets/images/Product presentation 1.jpg',
-  about: '/assets/images/Modaration.JPG',
-  pillar1: '/assets/images/Product Training 1.JPG',
-  pillar2: '/assets/images/Product Training 2.JPG',
-  pillar3: '/assets/images/Event 1.jpg',
+  about: '/assets/images/about.jpeg',
+  pillar1: '/assets/images/product-training-new.JPG',
+  pillar2: '/assets/images/Automotive.jpeg',
+  pillar3: '/assets/images/event.jpeg',
 };
 
 interface ImageContextType {

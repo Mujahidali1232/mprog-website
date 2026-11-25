@@ -108,7 +108,7 @@ export const Footer: React.FC = () => {
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-3.5 h-3.5 text-[#DFCA9E] shrink-0 mt-0.5" />
                   <span className="leading-relaxed text-[#B8C2BC] break-words min-w-0">
-                    {t.contact.companyName}<br />
+                    Mobile Product Genius UG<br />
                     {t.contact.addressLine1}<br />
                     {t.contact.addressCity}
                   </span>
@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
           {/* Bottom Bar */}
           <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#8C9991] text-center md:text-left">
             <div>
-              &copy; {new Date().getFullYear()} Mobile Product Genius UG. {t.footer.allRightsReserved}
+              &copy; {new Date().getFullYear()} Mobile Product Genius. {t.footer.allRightsReserved}
             </div>
 
             <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-5 gap-y-3 md:pr-12 min-[1440px]:pr-0">
@@ -213,7 +213,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-4 text-xs sm:text-sm text-[#B8C2BC] font-light leading-relaxed">
               <p>
                 <strong className="text-white">{t.footer.imprintContent.legalHeading}</strong><br />
-                {t.contact.companyName}<br />
+                Mobile Product Genius UG<br />
                 {t.contact.addressLine1}<br />
                 {t.contact.addressCity}
               </p>
